@@ -1,0 +1,12 @@
+---
+pagination:
+  data: plugins
+  size: 1
+  alias: plugin
+permalink: "plugin/{{ plugin.package.name | slugify }}/"
+eleventyComputed:
+  title: "{{plugin.package.name}}"
+layout: "base.njk"
+---
+
+{{ plugin.package.name }}

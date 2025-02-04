@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/assets/pico.min.css">
+
+    <link rel="stylesheet" href="/assets/prism-tomorrow.min.css">
+</head>
+<body>
+    <header class="container">
+        <h1>{{ title }}</h1>
+      <nav class="container">
+        <ul>
+          <li><strong><a href="/">Home</a></strong></li>
+          <li><a href="/guide/">Guide</a></li>
+          <li><a href="/api/">API</a></li>
+          <li><a href="https://github.com/chaijs/chai" target="_blank">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section>
+        {{ content | safe }}
+      </section>
+    </main>
+
+    <footer class="container">
+        <p>© 2025 Chai.js Documentation</p>
+    </footer>
+</body>
+</html>
