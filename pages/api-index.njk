@@ -1,0 +1,22 @@
+---
+permalink: "api/"
+title: "Chai API"
+layout: "base.njk"
+---
+
+<p>Chai has a rich ecosystem of plugins available.</p>
+
+<ul>
+{% for api in jsdoc %}
+  <li>
+    <a href="/api/{{ api.meta.path + api.meta.filename + api.meta.lineno | slugify }}/">
+      {{ api.meta.filename }}: {{ api.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
+<details>
+  <summary>Debug data</summary>
+  <code><pre>{{ jsdoc | jsonify }}</pre></code>
+</details>

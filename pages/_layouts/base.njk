@@ -13,11 +13,37 @@
       <h1>{{ title }}</h1>
       <nav class="container">
         <ul>
-          <li><strong><a href="/">Home</a></strong></li>
-          <li><a href="/guide/">Guide</a></li>
-          <li><a href="/api/">API</a></li>
-          <li><a href="/plugins/">Plugins</a></li>
-          <li><a href="https://github.com/chaijs/chai" target="_blank">GitHub</a></li>
+          <li>
+            {% if page.url == '/' %}
+              <strong><a href="/">Home</a></strong>
+            {% else %}
+              <a href="/">Home</a>
+            {% endif %}
+          </li>
+          <li>
+            {% if page.url.startsWith('/guide/') %}
+              <strong><a href="/guide/">Guide</a></strong>
+            {% else %}
+              <a href="/guide/">Guide</a>
+            {% endif %}
+          </li>
+          <li>
+            {% if page.url.startsWith('/api/') %}
+              <strong><a href="/api/">API</a></strong>
+            {% else %}
+              <a href="/api/">API</a>
+            {% endif %}
+          </li>
+          <li>
+            {% if page.url.startsWith('/plugins/') %}
+              <strong><a href="/plugins/">Plugins</a></strong>
+            {% else %}
+              <a href="/plugins/">Plugins</a>
+            {% endif %}
+          </li>
+          <li>
+            <a href="https://github.com/chaijs/chai" target="_blank">GitHub</a>
+          </li>
         </ul>
       </nav>
     </header>

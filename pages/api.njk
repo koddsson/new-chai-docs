@@ -1,0 +1,45 @@
+---js
+{
+  pagination: {
+    data: "jsdoc",
+    size: 1,
+    before: function(data, fullData) {
+      return data.filter(entry => {
+        return entry.description && entry.access == 'public';
+      });
+    },
+    alias: "jsdoc"
+  },
+  permalink: "api/{{ jsdoc.meta.path + jsdoc.meta.filename + jsdoc.meta.lineno | slugify }}/",
+  eleventyComputed: {
+    title: "{{ jsdoc.longname }}",
+  },
+  layout: "base.njk",
+}
+---
+
+{% markdown %}
+{{ jsdoc.description }}
+{% endmarkdown %}
+
+<table>
+  <thead>
+    <tr>
+      <td>Parameter</td>
+      <td>Type(s)</td>
+      <td>Description</td>
+    </tr>
+  </thead>
+  {% for param in jsdoc.params %}
+    <tr>
+      <td>{{param.name}}</td>
+      <td>{{param.type.names.join(',')}}</td>
+      <td>{{param.description}}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<details>
+  <summary>Debug data</summary>
+  <code><pre>{{ jsdoc | jsonify }}</pre></code>
+</details>
