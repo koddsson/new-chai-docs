@@ -4,19 +4,41 @@ title: "Chai API"
 layout: "base.njk"
 ---
 
-<p>Chai has a rich ecosystem of plugins available.</p>
+<p>The Chai API is broken down by style or task.</p>
+
+<h2>Assertion Styles</h2>
 
 <ul>
-{% for api in jsdoc %}
-  <li>
-    <a href="/api/{{ api.meta.path + api.meta.filename + api.meta.lineno | slugify }}/">
-      {{ api.meta.filename }}: {{ api.name }}
-    </a>
-  </li>
-{% endfor %}
+  <li>The <a href="/api/bdd/">Expect / Should API</a> covers the BDD assertion styles.</li>
+  <li>The <a href="/api/assert/">Assert API</a> covers the TDD assertion style.</li>
 </ul>
+
+<h2>Plugins</h2>
+<ul>
+  <li>The <a href="/api/plugins/">Plugin API</a> will be of use to anyone interested in building plugins as helpers to DRY up your tests, or for release to the community.</li>
+</ul>
+
+<h2>Tools</h2>
+<ul>
+  <li>The <a href="/api/test/">Online Test Suite</a> is a live run of Chai’s test suite. Use it to ensure browser compatibility.</li>
+</ul>
+
 
 <details>
   <summary>Debug data</summary>
+
+  <details>
+    <summary>Auto-generated API docs</summary>
+    <ul>
+    {% for api in jsdoc %}
+      <li>
+        <a href="/api/{{ api.meta.path + api.meta.filename + api.meta.lineno | slugify }}/">
+          {{ api.meta.filename }}: {{ api.name }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </details>
+
   <code><pre>{{ jsdoc | jsonify }}</pre></code>
 </details>

@@ -1,0 +1,47 @@
+---
+title: "Online Test Suite"
+layout: "base.njk"
+---
+
+<script type="importmap">
+  {
+    "imports": {
+      "assertion-error": "https://cdn.jsdelivr.net/npm/assertion-error",
+      "check-error": "https://cdn.jsdelivr.net/npm/check-error",
+      "deep-eql": "https://cdn.jsdelivr.net/npm/deep-eql",
+      "pathval": "https://cdn.jsdelivr.net/npm/pathval",
+      "loupe": "https://unpkg.com/loupe@3.1.3/lib/index.js?module"
+    }
+  }
+</script>
+<script>
+  function before(callback) {
+    callback();
+  }
+
+  function after(callback) {
+    callback();
+  }
+
+  function it(test, testCallback) {
+    console.log('  ', test);
+    try {
+      testCallback();
+    } catch(error) {
+      console.log(error.name, error.message)
+    }
+  }
+
+  function describe(suite, suiteCallback) {
+    console.log(suite);
+    suiteCallback();
+  }
+
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/assert.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/configuration.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/expect.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/globalShould.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/plugins.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/should.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/chaijs/chai/test/utilities.js"></script>
