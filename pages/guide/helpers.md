@@ -3,7 +3,7 @@ title: "Building a Helper"
 layout: "guide.njk"
 ---
 
-> This tutorial assumes that you are familiar with the plugin [core concepts](https://www.chaijs.com/guide/plugins/). If you have not yet read that article, it is recommended that you do so before continuing.
+> This tutorial assumes that you are familiar with the plugin [core concepts](/guide/plugins/). If you have not yet read that article, it is recommended that you do so before continuing.
 
 Providing chainable helper assertions is the most common use of the plugin utilities that Chai exposes. Before we get into the basics, we are going to need a topic for which we will extend Chai’s assertions to comprehend. For this, we will be using a very minimal data model object.
 

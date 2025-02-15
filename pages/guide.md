@@ -103,7 +103,7 @@ chai.expect(123).to.equal(123); // Logs `Called!` only once
 By following these guidelines, you can create Chai plugins that are easy to use
 and maintain.
 
-- [Core Plugin Concepts](https://www.chaijs.com/guide/plugins/) covers the
+- [Core Plugin Concepts](/guide/plugins/) covers the
   basics of using the Chai Plugin API.
-- [Building a Helper](https://www.chaijs.com/guide/helpers/) is a walk-through
+- [Building a Helper](/guide/helpers/) is a walk-through
   for writing your first plugin.
