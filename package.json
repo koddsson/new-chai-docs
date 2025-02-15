@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
     "lint": "markdownlint pages",
     "format": "markdownlint --fix pages",
     "test": "npm run lint"
@@ -22,6 +22,7 @@
     "markdown-it": "^14.1.0",
     "markdown-it-named-headings": "^1.1.0",
     "markdownlint": "^0.37.4",
+    "markdownlint-cli": "^0.44.0",
     "postcss": "^8.5.1",
     "puppeteer": "^24.1.1",
     "tailwindcss": "^4.0.3"
