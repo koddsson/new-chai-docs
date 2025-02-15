@@ -126,6 +126,12 @@ Chai has an extensive utility belt for plugin developers. Learn how to build you
 
 [Plugin Guide →](/guide/plugins/)
 
+## Powered by Open Source
+
+Chai is hosted on GitHub. Have a suggestion or found a bug? Fork this project to help make Chai even better. Even this documentation site is open source and available for contribution.
+
+[Fork Chai on GitHub →](https://github.com/chaijs/chai)
+
 ## Join our Community
 
 We have an active **GitHub Discussions** forum where you can ask questions, discuss improvements, and contribute to Chai.

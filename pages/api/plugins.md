@@ -369,12 +369,6 @@ Gets the error message from an error. If `err` is a String itself, we return it.
 
 Returns the name of a function. When a non-function instance is passed, returns `null`. This also includes a polyfill function if `aFunc.name` is not defined.
 
-### .getFuncName(constructorFn)
-
-- @param { Function } funct
-
-Returns the name of a function. When a non-function instance is passed, returns `null`. This also includes a polyfill function if `aFunc.name` is not defined.
-
 ### .hasProperty(object, name)
 
 - @param { Object } object

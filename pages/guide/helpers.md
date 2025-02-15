@@ -130,7 +130,7 @@ All calls to `assert` are synchronous, so if the first one fails, the `Assertion
 
 Chai includes a unique utility that allows you to construct a language chain that can function as either a property or a method. We call these “chainable methods”.
 
-**When to Use**
+#### When to Use
 
 To understand when to best use chainable methods, we will examine a chainable method from Chai’s core.
 
@@ -146,7 +146,7 @@ For this to work, two separate functions are needed. One that will be invoked wh
 
 In these examples, and with all of the other chainable methods in core, the only function of `contain` as a property is to set a `contains` flag to true. This indicates to `keys` to behave differently. In this case, when `key` is used in conjunction with `contain`, it will check for the inclusion of a key, instead of checking the exact match to all keys.
 
-**When NOT to Use**
+#### When NOT to Use
 
 Let’s say we set up a chainable method for `model` to behave as we indicated above: do an `instanceof` check if used as a property, and a `_type` check if used as a method.
 
@@ -172,7 +172,7 @@ As such, please obey this general guideline when constructing chainable methods.
 
 **When constructing chainable methods, the property function should only serve to set a flag for later modifying the behavior of an existing assertion.**
 
-**An Appropriate Example**
+#### An Appropriate Example
 
 For use with our model example, we are going to construct an example that allows us to test Arthur’s age exactly, or chain into Chai’s numerical comparators, such as `above`, `below`, and `within`. You will need to learn how to overwrite methods without destroying core functionality, but we get to that a bit later.
 

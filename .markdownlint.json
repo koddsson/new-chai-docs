@@ -4,5 +4,6 @@
   },
   "code-fence-style": {
     "style": "backtick"
-  }
+  },
+  "line-length": false
 }
