@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "start": "eleventy --serve",
-    "lint": "npx markdownlint pages",
-    "format": "npx markdownlint --fix pages",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "eleventy",
+    "lint": "markdownlint pages",
+    "format": "markdownlint --fix pages",
+    "test": "npm run lint"
   },
   "keywords": [],
   "author": "",
