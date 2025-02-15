@@ -1,48 +1,20 @@
 import markdownit from "markdown-it";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
-function uncollide(ids, id) {
-  if (!ids[id]) return id;
-  let i = 1;
-  while (ids[id + "-" + i]) i++;
-  return id + "-" + i;
-}
+// Needed for GitHub Pages
+export const config = {
+  pathPrefix: "/new-chai-docs/",
+};
 
-function setAttr(token, attr, value, options) {
-  const idx = token.attrIndex(attr);
-
-  if (idx === -1) {
-    token.attrPush([attr, value]);
-  } else if (options && options.append) {
-    token.attrs[idx][1] = token.attrs[idx][1] + " " + value;
-  } else {
-    token.attrs[idx][1] = value;
-  }
-}
-
-function namedHeadings(state) {
-  console.log(state.tokens.entries());
-  for (const [i, token] in state.tokens.entries()) {
-    console.log({ i, token });
-    if (token.type === "heading_open") {
-      console.log("here");
-      const text = md.renderer.render(state.tokens[i + 1].children, md.options);
-      console.log({ text });
-      const id = kebabcase(unidecode(text));
-      const uniqId = uncollide(ids, id);
-      ids[uniqId] = true;
-      setAttr(token, "id", uniqId);
-    }
-  }
-}
-
-const md = markdownit().use(function (md) {
-  md.core.ruler.push("named_headings", namedHeadings);
-});
+const md = markdownit();
 
 export default function (eleventyConfig) {
   // Enable syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Needed for deploying to GitHub Pages
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy({
     "public/": "/assets/",
