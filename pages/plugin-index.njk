@@ -1,0 +1,13 @@
+---
+permalink: "plugins/"
+title: "Chai Plugins"
+layout: "base.njk"
+---
+
+<ul>
+{% for plugin in plugins.sort() %}
+  <li>
+    <a href="/plugin/{{ plugin.package.name | slugify }}/">{{ plugin.package.name }}</a>
+  </li>
+{% endfor %}
+</ul>
