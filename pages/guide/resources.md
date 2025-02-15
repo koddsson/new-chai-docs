@@ -32,7 +32,7 @@ It's also quite simple. Open up `test/browser/index.html` in your nearest browse
 If you have made changes to any of the components, you must rebuild the browser package:
 
 ```js
-$ make
+make
 ```
 
 ## Contributors

@@ -1,0 +1,61 @@
+---
+layout: "base.njk"
+---
+
+<style>
+/* Style the navigation to be more compact */
+.sidebar {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Make details/summary more readable */
+.sidebar summary {
+  font-weight: bold;
+  padding: 0.4rem;
+}
+
+.sidebar details[open] > summary {
+  margin-bottom: 1rem;
+}
+
+/* Indent nested lists */
+.sidebar ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+/* Style links */
+.sidebar a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar details {
+  margin: 0;
+}
+</style>
+
+<aside>
+  <details class="sidebar">
+    <summary>API Navigation</summary>
+    <nav>
+      <ul>
+        <li><a href="/api/bdd/">Expect / Should API</a></li>
+        <li><a href="/api/assert/">Assert API</a></li>
+        <li><a href="/api/plugins/">Plugin API</a></li>
+        <li><a href="/api/test/">Online Test Suite</a></li>
+      </ul>
+    </nav>
+  </details>
+</aside>
+
+{{ content | safe }}

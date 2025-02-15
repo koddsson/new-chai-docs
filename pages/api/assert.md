@@ -1,17 +1,16 @@
 ---
 title: "Assert"
-layout: "base.njk"
+layout: "api.njk"
 ---
 
-{% markdown %}
 The `assert` style is very similar to node.js’ included assert module, with a bit of extra sugar. Of the three style options, `assert` is the only one that is not chainable. Check out the [Style Guide](/guide/styles) for a comparison.
 
 ## API Reference
 
 ### assert(expression, message)
 
-*   @param { Mixed } expression to test for truthiness
-*   @param { String } message to display on error
+* @param { Mixed } expression to test for truthiness
+* @param { String } message to display on error
 
 Write your own test expressions.
 
@@ -23,10 +22,10 @@ Write your own test expressions.
 
 ### .fail(actual, expected, \[message\], \[operator\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
-*   @param { String } operator
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
+* @param { String } operator
 
 Throw a failure. Node.js `assert` module-compatible.
 
@@ -40,8 +39,8 @@ Throw a failure. Node.js `assert` module-compatible.
 
 ### .isOk(object, \[message\])
 
-*   @param { Mixed } object to test
-*   @param { String } message
+* @param { Mixed } object to test
+* @param { String } message
 
 Asserts that `object` is truthy.
 
@@ -51,8 +50,8 @@ Asserts that `object` is truthy.
 
 ### .isNotOk(object, \[message\])
 
-*   @param { Mixed } object to test
-*   @param { String } message
+* @param { Mixed } object to test
+* @param { String } message
 
 Asserts that `object` is falsy.
 
@@ -62,9 +61,9 @@ Asserts that `object` is falsy.
 
 ### .equal(actual, expected, \[message\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
 
 Asserts non-strict equality (`==`) of `actual` and `expected`.
 
@@ -73,9 +72,9 @@ Asserts non-strict equality (`==`) of `actual` and `expected`.
 
 ### .notEqual(actual, expected, \[message\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
 
 Asserts non-strict inequality (`!=`) of `actual` and `expected`.
 
@@ -84,9 +83,9 @@ Asserts non-strict inequality (`!=`) of `actual` and `expected`.
 
 ### .strictEqual(actual, expected, \[message\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
 
 Asserts strict equality (`===`) of `actual` and `expected`.
 
@@ -95,9 +94,9 @@ Asserts strict equality (`===`) of `actual` and `expected`.
 
 ### .notStrictEqual(actual, expected, \[message\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
 
 Asserts strict inequality (`!==`) of `actual` and `expected`.
 
@@ -106,9 +105,9 @@ Asserts strict inequality (`!==`) of `actual` and `expected`.
 
 ### .deepEqual(actual, expected, \[message\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
 
 Asserts that `actual` is deeply equal to `expected`.
 
@@ -117,9 +116,9 @@ Asserts that `actual` is deeply equal to `expected`.
 
 ### .notDeepEqual(actual, expected, \[message\])
 
-*   @param { Mixed } actual
-*   @param { Mixed } expected
-*   @param { String } message
+* @param { Mixed } actual
+* @param { Mixed } expected
+* @param { String } message
 
 Assert that `actual` is not deeply equal to `expected`.
 
@@ -128,9 +127,9 @@ Assert that `actual` is not deeply equal to `expected`.
 
 ### .isAbove(valueToCheck, valueToBeAbove, \[message\])
 
-*   @param { Mixed } valueToCheck
-*   @param { Mixed } valueToBeAbove
-*   @param { String } message
+* @param { Mixed } valueToCheck
+* @param { Mixed } valueToBeAbove
+* @param { String } message
 
 Asserts `valueToCheck` is strictly greater than (>) `valueToBeAbove`.
 
@@ -139,9 +138,9 @@ Asserts `valueToCheck` is strictly greater than (>) `valueToBeAbove`.
 
 ### .isAtLeast(valueToCheck, valueToBeAtLeast, \[message\])
 
-*   @param { Mixed } valueToCheck
-*   @param { Mixed } valueToBeAtLeast
-*   @param { String } message
+* @param { Mixed } valueToCheck
+* @param { Mixed } valueToBeAtLeast
+* @param { String } message
 
 Asserts `valueToCheck` is greater than or equal to (>=) `valueToBeAtLeast`.
 
@@ -151,9 +150,9 @@ Asserts `valueToCheck` is greater than or equal to (>=) `valueToBeAtLeast`.
 
 ### .isBelow(valueToCheck, valueToBeBelow, \[message\])
 
-*   @param { Mixed } valueToCheck
-*   @param { Mixed } valueToBeBelow
-*   @param { String } message
+* @param { Mixed } valueToCheck
+* @param { Mixed } valueToBeBelow
+* @param { String } message
 
 Asserts `valueToCheck` is strictly less than (<) `valueToBeBelow`.
 
@@ -162,9 +161,9 @@ Asserts `valueToCheck` is strictly less than (<) `valueToBeBelow`.
 
 ### .isAtMost(valueToCheck, valueToBeAtMost, \[message\])
 
-*   @param { Mixed } valueToCheck
-*   @param { Mixed } valueToBeAtMost
-*   @param { String } message
+* @param { Mixed } valueToCheck
+* @param { Mixed } valueToBeAtMost
+* @param { String } message
 
 Asserts `valueToCheck` is less than or equal to (<=) `valueToBeAtMost`.
 
@@ -174,8 +173,8 @@ Asserts `valueToCheck` is less than or equal to (<=) `valueToBeAtMost`.
 
 ### .isTrue(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is true.
 
@@ -185,8 +184,8 @@ Asserts that `value` is true.
 
 ### .isNotTrue(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is not true.
 
@@ -196,8 +195,8 @@ Asserts that `value` is not true.
 
 ### .isFalse(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is false.
 
@@ -207,8 +206,8 @@ Asserts that `value` is false.
 
 ### .isNotFalse(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is not false.
 
@@ -218,8 +217,8 @@ Asserts that `value` is not false.
 
 ### .isNull(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is null.
 
@@ -228,8 +227,8 @@ Asserts that `value` is null.
 
 ### .isNotNull(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is not null.
 
@@ -239,8 +238,8 @@ Asserts that `value` is not null.
 
 ### .isNaN
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that value is NaN.
 
@@ -249,8 +248,8 @@ Asserts that value is NaN.
 
 ### .isNotNaN
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that value is not NaN.
 
@@ -259,8 +258,8 @@ Asserts that value is not NaN.
 
 ### .exists
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that the target is neither `null` nor `undefined`.
 
@@ -271,8 +270,8 @@ Asserts that the target is neither `null` nor `undefined`.
 
 ### .notExists
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that the target is either `null` or `undefined`.
 
@@ -285,8 +284,8 @@ Asserts that the target is either `null` or `undefined`.
 
 ### .isUndefined(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is `undefined`.
 
@@ -296,8 +295,8 @@ Asserts that `value` is `undefined`.
 
 ### .isDefined(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is not `undefined`.
 
@@ -307,8 +306,8 @@ Asserts that `value` is not `undefined`.
 
 ### .isFunction(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is a function.
 
@@ -318,8 +317,8 @@ Asserts that `value` is a function.
 
 ### .isNotFunction(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is _not_ a function.
 
@@ -329,8 +328,8 @@ Asserts that `value` is _not_ a function.
 
 ### .isObject(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is an object of type ‘Object’ (as revealed by `Object.prototype.toString`). _The assertion does not match subclassed objects._
 
@@ -340,8 +339,8 @@ Asserts that `value` is an object of type ‘Object’ (as revealed by `Object.p
 
 ### .isNotObject(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is _not_ an object of type ‘Object’ (as revealed by `Object.prototype.toString`).
 
@@ -352,8 +351,8 @@ Asserts that `value` is _not_ an object of type ‘Object’ (as revealed by `Ob
 
 ### .isArray(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is an array.
 
@@ -363,8 +362,8 @@ Asserts that `value` is an array.
 
 ### .isNotArray(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is _not_ an array.
 
@@ -374,8 +373,8 @@ Asserts that `value` is _not_ an array.
 
 ### .isString(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is a string.
 
@@ -385,8 +384,8 @@ Asserts that `value` is a string.
 
 ### .isNotString(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is _not_ a string.
 
@@ -396,8 +395,8 @@ Asserts that `value` is _not_ a string.
 
 ### .isNumber(value, \[message\])
 
-*   @param { Number } value
-*   @param { String } message
+* @param { Number } value
+* @param { String } message
 
 Asserts that `value` is a number.
 
@@ -407,8 +406,8 @@ Asserts that `value` is a number.
 
 ### .isNotNumber(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is _not_ a number.
 
@@ -418,8 +417,8 @@ Asserts that `value` is _not_ a number.
 
 ### .isFinite(value, \[message\])
 
-*   @param { Number } value
-*   @param { String } message
+* @param { Number } value
+* @param { String } message
 
 Asserts that `value` is a finite number. Unlike `.isNumber`, this will fail for `NaN` and `Infinity`.
 
@@ -431,8 +430,8 @@ Asserts that `value` is a finite number. Unlike `.isNumber`, this will fail for 
 
 ### .isBoolean(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is a boolean.
 
@@ -445,8 +444,8 @@ Asserts that `value` is a boolean.
 
 ### .isNotBoolean(value, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `value` is _not_ a boolean.
 
@@ -459,9 +458,9 @@ Asserts that `value` is _not_ a boolean.
 
 ### .typeOf(value, name, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } name
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } name
+* @param { String } message
 
 Asserts that `value`’s type is `name`, as determined by `Object.prototype.toString`.
 
@@ -475,9 +474,9 @@ Asserts that `value`’s type is `name`, as determined by `Object.prototype.toSt
 
 ### .notTypeOf(value, name, \[message\])
 
-*   @param { Mixed } value
-*   @param { String } typeof name
-*   @param { String } message
+* @param { Mixed } value
+* @param { String } typeof name
+* @param { String } message
 
 Asserts that `value`’s type is _not_ `name`, as determined by `Object.prototype.toString`.
 
@@ -486,9 +485,9 @@ Asserts that `value`’s type is _not_ `name`, as determined by `Object.prototyp
 
 ### .instanceOf(object, constructor, \[message\])
 
-*   @param { Object } object
-*   @param { Constructor } constructor
-*   @param { String } message
+* @param { Object } object
+* @param { Constructor } constructor
+* @param { String } message
 
 Asserts that `value` is an instance of `constructor`.
 
@@ -500,9 +499,9 @@ Asserts that `value` is an instance of `constructor`.
 
 ### .notInstanceOf(object, constructor, \[message\])
 
-*   @param { Object } object
-*   @param { Constructor } constructor
-*   @param { String } message
+* @param { Object } object
+* @param { Constructor } constructor
+* @param { String } message
 
 Asserts `value` is not an instance of `constructor`.
 
@@ -514,9 +513,9 @@ Asserts `value` is not an instance of `constructor`.
 
 ### .include(haystack, needle, \[message\])
 
-*   @param { Array | String } haystack
-*   @param { Mixed } needle
-*   @param { String } message
+* @param { Array | String } haystack
+* @param { Mixed } needle
+* @param { String } message
 
 Asserts that `haystack` includes `needle`. Can be used to assert the inclusion of a value in an array, a substring in a string, or a subset of properties in an object.
 
@@ -536,9 +535,9 @@ Strict equality (===) is used. When asserting the inclusion of a value in an arr
 
 ### .notInclude(haystack, needle, \[message\])
 
-*   @param { Array | String } haystack
-*   @param { Mixed } needle
-*   @param { String } message
+* @param { Array | String } haystack
+* @param { Mixed } needle
+* @param { String } message
 
 Asserts that `haystack` does not include `needle`. Can be used to assert the absence of a value in an array, a substring in a string, or a subset of properties in an object.
 
@@ -558,9 +557,9 @@ Strict equality (===) is used. When asserting the absence of a value in an array
 
 ### .deepInclude(haystack, needle, \[message\])
 
-*   @param { Array | String } haystack
-*   @param { Mixed } needle
-*   @param { String } message
+* @param { Array | String } haystack
+* @param { Mixed } needle
+* @param { String } message
 
 Asserts that `haystack` includes `needle`. Can be used to assert the inclusion of a value in an array or a subset of properties in an object. Deep equality is used.
 
@@ -573,9 +572,9 @@ Asserts that `haystack` includes `needle`. Can be used to assert the inclusion o
 
 ### .notDeepInclude(haystack, needle, \[message\])
 
-*   @param { Array | String } haystack
-*   @param { Mixed } needle
-*   @param { String } message
+* @param { Array | String } haystack
+* @param { Mixed } needle
+* @param { String } message
 
 Asserts that `haystack` does not include `needle`. Can be used to assert the absence of a value in an array or a subset of properties in an object. Deep equality is used.
 
@@ -588,9 +587,9 @@ Asserts that `haystack` does not include `needle`. Can be used to assert the abs
 
 ### .nestedInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inclusion of a subset of properties in an object. Enables the use of dot- and bracket-notation for referencing nested properties. ‘\[\]’ and ‘.’ in property names can be escaped using double backslashes.
 
@@ -600,9 +599,9 @@ Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inc
 
 ### .notNestedInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ does not include ‘needle’. Can be used to assert the absence of a subset of properties in an object. Enables the use of dot- and bracket-notation for referencing nested properties. ‘\[\]’ and ‘.’ in property names can be escaped using double backslashes.
 
@@ -612,9 +611,9 @@ Asserts that ‘haystack’ does not include ‘needle’. Can be used to assert
 
 ### .deepNestedInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inclusion of a subset of properties in an object while checking for deep equality. Enables the use of dot- and bracket-notation for referencing nested properties. ‘\[\]’ and ‘.’ in property names can be escaped using double backslashes.
 
@@ -624,9 +623,9 @@ Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inc
 
 ### .notDeepNestedInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ does not include ‘needle’. Can be used to assert the absence of a subset of properties in an object while checking for deep equality. Enables the use of dot- and bracket-notation for referencing nested properties. ‘\[\]’ and ‘.’ in property names can be escaped using double backslashes.
 
@@ -636,9 +635,9 @@ Asserts that ‘haystack’ does not include ‘needle’. Can be used to assert
 
 ### .ownInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inclusion of a subset of properties in an object while ignoring inherited properties.
 
@@ -647,9 +646,9 @@ Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inc
 
 ### .notOwnInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the absence of a subset of properties in an object while ignoring inherited properties.
 
@@ -660,9 +659,9 @@ Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the abs
 
 ### .deepOwnInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inclusion of a subset of properties in an object while ignoring inherited properties and checking for deep equality.
 
@@ -671,9 +670,9 @@ Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the inc
 
 ### .notDeepOwnInclude(haystack, needle, \[message\])
 
-*   @param { Object } haystack
-*   @param { Object } needle
-*   @param { String } message
+* @param { Object } haystack
+* @param { Object } needle
+* @param { String } message
 
 Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the absence of a subset of properties in an object while ignoring inherited properties and checking for deep equality.
 
@@ -682,9 +681,9 @@ Asserts that ‘haystack’ includes ‘needle’. Can be used to assert the abs
 
 ### .match(value, regexp, \[message\])
 
-*   @param { Mixed } value
-*   @param { RegExp } regexp
-*   @param { String } message
+* @param { Mixed } value
+* @param { RegExp } regexp
+* @param { String } message
 
 Asserts that `value` matches the regular expression `regexp`.
 
@@ -693,9 +692,9 @@ Asserts that `value` matches the regular expression `regexp`.
 
 ### .notMatch(value, regexp, \[message\])
 
-*   @param { Mixed } value
-*   @param { RegExp } regexp
-*   @param { String } message
+* @param { Mixed } value
+* @param { RegExp } regexp
+* @param { String } message
 
 Asserts that `value` does not match the regular expression `regexp`.
 
@@ -704,9 +703,9 @@ Asserts that `value` does not match the regular expression `regexp`.
 
 ### .property(object, property, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { String } message
 
 Asserts that `object` has a direct or inherited property named by `property`.
 
@@ -716,9 +715,9 @@ Asserts that `object` has a direct or inherited property named by `property`.
 
 ### .notProperty(object, property, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { String } message
 
 Asserts that `object` does _not_ have a direct or inherited property named by `property`.
 
@@ -727,10 +726,10 @@ Asserts that `object` does _not_ have a direct or inherited property named by `p
 
 ### .propertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` has a direct or inherited property named by `property` with a value given by `value`. Uses a strict equality check (===).
 
@@ -739,10 +738,10 @@ Asserts that `object` has a direct or inherited property named by `property` wit
 
 ### .notPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` does _not_ have a direct or inherited property named by `property` with value given by `value`. Uses a strict equality check (===).
 
@@ -752,10 +751,10 @@ Asserts that `object` does _not_ have a direct or inherited property named by `p
 
 ### .deepPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` has a direct or inherited property named by `property` with a value given by `value`. Uses a deep equality check.
 
@@ -764,10 +763,10 @@ Asserts that `object` has a direct or inherited property named by `property` wit
 
 ### .notDeepPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` does _not_ have a direct or inherited property named by `property` with value given by `value`. Uses a deep equality check.
 
@@ -778,9 +777,9 @@ Asserts that `object` does _not_ have a direct or inherited property named by `p
 
 ### .nestedProperty(object, property, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { String } message
 
 Asserts that `object` has a direct or inherited property named by `property`, which can be a string using dot- and bracket-notation for nested reference.
 
@@ -789,9 +788,9 @@ Asserts that `object` has a direct or inherited property named by `property`, wh
 
 ### .notNestedProperty(object, property, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { String } message
 
 Asserts that `object` does _not_ have a property named by `property`, which can be a string using dot- and bracket-notation for nested reference. The property cannot exist on the object nor anywhere in its prototype chain.
 
@@ -800,10 +799,10 @@ Asserts that `object` does _not_ have a property named by `property`, which can 
 
 ### .nestedPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` has a property named by `property` with value given by `value`. `property` can use dot- and bracket-notation for nested reference. Uses a strict equality check (===).
 
@@ -812,10 +811,10 @@ Asserts that `object` has a property named by `property` with value given by `va
 
 ### .notNestedPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` does _not_ have a property named by `property` with value given by `value`. `property` can use dot- and bracket-notation for nested reference. Uses a strict equality check (===).
 
@@ -825,10 +824,10 @@ Asserts that `object` does _not_ have a property named by `property` with value 
 
 ### .deepNestedPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` has a property named by `property` with a value given by `value`. `property` can use dot- and bracket-notation for nested reference. Uses a deep equality check.
 
@@ -837,10 +836,10 @@ Asserts that `object` has a property named by `property` with a value given by `
 
 ### .notDeepNestedPropertyVal(object, property, value, \[message\])
 
-*   @param { Object } object
-*   @param { String } property
-*   @param { Mixed } value
-*   @param { String } message
+* @param { Object } object
+* @param { String } property
+* @param { Mixed } value
+* @param { String } message
 
 Asserts that `object` does _not_ have a property named by `property` with value given by `value`. `property` can use dot- and bracket-notation for nested reference. Uses a deep equality check.
 
@@ -851,9 +850,9 @@ Asserts that `object` does _not_ have a property named by `property` with value 
 
 ### .lengthOf(object, length, \[message\])
 
-*   @param { Mixed } object
-*   @param { Number } length
-*   @param { String } message
+* @param { Mixed } object
+* @param { Number } length
+* @param { String } message
 
 Asserts that `object` has a `length` or `size` with the expected value.
 
@@ -865,9 +864,9 @@ Asserts that `object` has a `length` or `size` with the expected value.
 
 ### .hasAnyKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array | Object } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array | Object } keys
+* @param { String } message
 
 Asserts that `object` has at least one of the `keys` provided. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -879,9 +878,9 @@ Asserts that `object` has at least one of the `keys` provided. You can also prov
 
 ### .hasAllKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array. } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array. } keys
+* @param { String } message
 
 Asserts that `object` has all and only all of the `keys` provided. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -893,9 +892,9 @@ Asserts that `object` has all and only all of the `keys` provided. You can also 
 
 ### .containsAllKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array. } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array. } keys
+* @param { String } message
 
 Asserts that `object` has all of the `keys` provided but may have more keys not listed. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -911,9 +910,9 @@ Asserts that `object` has all of the `keys` provided but may have more keys not 
 
 ### .doesNotHaveAnyKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array. } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array. } keys
+* @param { String } message
 
 Asserts that `object` has none of the `keys` provided. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -925,9 +924,9 @@ Asserts that `object` has none of the `keys` provided. You can also provide a si
 
 ### .doesNotHaveAllKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array. } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array. } keys
+* @param { String } message
 
 Asserts that `object` does not have at least one of the `keys` provided. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -939,9 +938,9 @@ Asserts that `object` does not have at least one of the `keys` provided. You can
 
 ### .hasAnyDeepKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array | Object } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array | Object } keys
+* @param { String } message
 
 Asserts that `object` has at least one of the `keys` provided. Since Sets and Maps can have objects as keys you can use this assertion to perform a deep comparison. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -955,9 +954,9 @@ Asserts that `object` has at least one of the `keys` provided. Since Sets and Ma
 
 ### .hasAllDeepKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array | Object } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array | Object } keys
+* @param { String } message
 
 Asserts that `object` has all and only all of the `keys` provided. Since Sets and Maps can have objects as keys you can use this assertion to perform a deep comparison. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -969,9 +968,9 @@ Asserts that `object` has all and only all of the `keys` provided. Since Sets an
 
 ### .containsAllDeepKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array | Object } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array | Object } keys
+* @param { String } message
 
 Asserts that `object` contains all of the `keys` provided. Since Sets and Maps can have objects as keys you can use this assertion to perform a deep comparison. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -983,9 +982,9 @@ Asserts that `object` contains all of the `keys` provided. Since Sets and Maps c
 
 ### .doesNotHaveAnyDeepKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array | Object } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array | Object } keys
+* @param { String } message
 
 Asserts that `object` has none of the `keys` provided. Since Sets and Maps can have objects as keys you can use this assertion to perform a deep comparison. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -997,9 +996,9 @@ Asserts that `object` has none of the `keys` provided. Since Sets and Maps can h
 
 ### .doesNotHaveAllDeepKeys(object, \[keys\], \[message\])
 
-*   @param { Mixed } object
-*   @param { Array | Object } keys
-*   @param { String } message
+* @param { Mixed } object
+* @param { Array | Object } keys
+* @param { String } message
 
 Asserts that `object` does not have at least one of the `keys` provided. Since Sets and Maps can have objects as keys you can use this assertion to perform a deep comparison. You can also provide a single object instead of a `keys` array and its keys will be used as the expected set of keys.
 
@@ -1011,11 +1010,11 @@ Asserts that `object` does not have at least one of the `keys` provided. Since S
 
 ### .throws(fn, \[errorLike/string/regexp\], \[string/regexp\], \[message\])
 
-*   @param { Function } fn
-*   @param { ErrorConstructor | Error } errorLike
-*   @param { RegExp | String } errMsgMatcher
-*   @param { String } message
-*   @see [https://developer.mozilla.org/en/JavaScript/Reference/Global\_Objects/Error#Error\_types](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types)
+* @param { Function } fn
+* @param { ErrorConstructor | Error } errorLike
+* @param { RegExp | String } errMsgMatcher
+* @param { String } message
+* @see [https://developer.mozilla.org/en/JavaScript/Reference/Global\_Objects/Error#Error\_types](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types)
 
 If `errorLike` is an `Error` constructor, asserts that `fn` will throw an error that is an instance of `errorLike`. If `errorLike` is an `Error` instance, asserts that the error thrown is the same instance as `errorLike`. If `errMsgMatcher` is provided, it also asserts that the error thrown will have a message matching `errMsgMatcher`.
 
@@ -1031,11 +1030,11 @@ If `errorLike` is an `Error` constructor, asserts that `fn` will throw an error 
 
 ### .doesNotThrow(fn, \[errorLike/string/regexp\], \[string/regexp\], \[message\])
 
-*   @param { Function } fn
-*   @param { ErrorConstructor } errorLike
-*   @param { RegExp | String } errMsgMatcher
-*   @param { String } message
-*   @see [https://developer.mozilla.org/en/JavaScript/Reference/Global\_Objects/Error#Error\_types](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types)
+* @param { Function } fn
+* @param { ErrorConstructor } errorLike
+* @param { RegExp | String } errMsgMatcher
+* @param { String } message
+* @see [https://developer.mozilla.org/en/JavaScript/Reference/Global\_Objects/Error#Error\_types](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types)
 
 If `errorLike` is an `Error` constructor, asserts that `fn` will _not_ throw an error that is an instance of `errorLike`. If `errorLike` is an `Error` instance, asserts that the error thrown is _not_ the same instance as `errorLike`. If `errMsgMatcher` is provided, it also asserts that the error thrown will _not_ have a message matching `errMsgMatcher`.
 
@@ -1051,10 +1050,10 @@ If `errorLike` is an `Error` constructor, asserts that `fn` will _not_ throw an 
 
 ### .operator(val1, operator, val2, \[message\])
 
-*   @param { Mixed } val1
-*   @param { String } operator
-*   @param { Mixed } val2
-*   @param { String } message
+* @param { Mixed } val1
+* @param { String } operator
+* @param { Mixed } val2
+* @param { String } message
 
 Compares two values using `operator`.
 
@@ -1064,10 +1063,10 @@ Compares two values using `operator`.
 
 ### .closeTo(actual, expected, delta, \[message\])
 
-*   @param { Number } actual
-*   @param { Number } expected
-*   @param { Number } delta
-*   @param { String } message
+* @param { Number } actual
+* @param { Number } expected
+* @param { Number } delta
+* @param { String } message
 
 Asserts that the target is equal `expected`, to within a +/- `delta` range.
 
@@ -1076,10 +1075,10 @@ Asserts that the target is equal `expected`, to within a +/- `delta` range.
 
 ### .approximately(actual, expected, delta, \[message\])
 
-*   @param { Number } actual
-*   @param { Number } expected
-*   @param { Number } delta
-*   @param { String } message
+* @param { Number } actual
+* @param { Number } expected
+* @param { Number } delta
+* @param { String } message
 
 Asserts that the target is equal `expected`, to within a +/- `delta` range.
 
@@ -1088,9 +1087,9 @@ Asserts that the target is equal `expected`, to within a +/- `delta` range.
 
 ### .sameMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` have the same members in any order. Uses a strict equality check (===).
 
@@ -1099,9 +1098,9 @@ Asserts that `set1` and `set2` have the same members in any order. Uses a strict
 
 ### .notSameMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` don’t have the same members in any order. Uses a strict equality check (===).
 
@@ -1110,9 +1109,9 @@ Asserts that `set1` and `set2` don’t have the same members in any order. Uses 
 
 ### .sameDeepMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` have the same members in any order. Uses a deep equality check.
 
@@ -1121,9 +1120,9 @@ Asserts that `set1` and `set2` have the same members in any order. Uses a deep e
 
 ### .notSameDeepMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` don’t have the same members in any order. Uses a deep equality check.
 
@@ -1132,9 +1131,9 @@ Asserts that `set1` and `set2` don’t have the same members in any order. Uses 
 
 ### .sameOrderedMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` have the same members in the same order. Uses a strict equality check (===).
 
@@ -1143,9 +1142,9 @@ Asserts that `set1` and `set2` have the same members in the same order. Uses a s
 
 ### .notSameOrderedMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` don’t have the same members in the same order. Uses a strict equality check (===).
 
@@ -1154,9 +1153,9 @@ Asserts that `set1` and `set2` don’t have the same members in the same order. 
 
 ### .sameDeepOrderedMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` have the same members in the same order. Uses a deep equality check.
 
@@ -1165,9 +1164,9 @@ Asserts that `set1` and `set2` have the same members in the same order. Uses a d
 
 ### .notSameDeepOrderedMembers(set1, set2, \[message\])
 
-*   @param { Array } set1
-*   @param { Array } set2
-*   @param { String } message
+* @param { Array } set1
+* @param { Array } set2
+* @param { String } message
 
 Asserts that `set1` and `set2` don’t have the same members in the same order. Uses a deep equality check.
 
@@ -1177,9 +1176,9 @@ Asserts that `set1` and `set2` don’t have the same members in the same order. 
 
 ### .includeMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` is included in `superset` in any order. Uses a strict equality check (===). Duplicates are ignored.
 
@@ -1188,9 +1187,9 @@ Asserts that `subset` is included in `superset` in any order. Uses a strict equa
 
 ### .notIncludeMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` isn’t included in `superset` in any order. Uses a strict equality check (===). Duplicates are ignored.
 
@@ -1199,9 +1198,9 @@ Asserts that `subset` isn’t included in `superset` in any order. Uses a strict
 
 ### .includeDeepMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` is included in `superset` in any order. Uses a deep equality check. Duplicates are ignored.
 
@@ -1210,9 +1209,9 @@ Asserts that `subset` is included in `superset` in any order. Uses a deep equali
 
 ### .notIncludeDeepMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` isn’t included in `superset` in any order. Uses a deep equality check. Duplicates are ignored.
 
@@ -1221,9 +1220,9 @@ Asserts that `subset` isn’t included in `superset` in any order. Uses a deep e
 
 ### .includeOrderedMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` is included in `superset` in the same order beginning with the first element in `superset`. Uses a strict equality check (===).
 
@@ -1232,9 +1231,9 @@ Asserts that `subset` is included in `superset` in the same order beginning with
 
 ### .notIncludeOrderedMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` isn’t included in `superset` in the same order beginning with the first element in `superset`. Uses a strict equality check (===).
 
@@ -1244,9 +1243,9 @@ Asserts that `subset` isn’t included in `superset` in the same order beginning
 
 ### .includeDeepOrderedMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` is included in `superset` in the same order beginning with the first element in `superset`. Uses a deep equality check.
 
@@ -1255,9 +1254,9 @@ Asserts that `subset` is included in `superset` in the same order beginning with
 
 ### .notIncludeDeepOrderedMembers(superset, subset, \[message\])
 
-*   @param { Array } superset
-*   @param { Array } subset
-*   @param { String } message
+* @param { Array } superset
+* @param { Array } subset
+* @param { String } message
 
 Asserts that `subset` isn’t included in `superset` in the same order beginning with the first element in `superset`. Uses a deep equality check.
 
@@ -1268,9 +1267,9 @@ Asserts that `subset` isn’t included in `superset` in the same order beginning
 
 ### .oneOf(inList, list, \[message\])
 
-*   @param { } inList
-*   @param { Array.<\*> } list
-*   @param { String } message
+* @param { } inList
+* @param { Array.<\*> } list
+* @param { String } message
 
 Asserts that non-object, non-array value `inList` appears in the flat array `list`.
 
@@ -1279,10 +1278,10 @@ Asserts that non-object, non-array value `inList` appears in the flat array `lis
 
 ### .changes(function, object, property, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { String } message \_optional\_
 
 Asserts that a function changes the value of a property.
 
@@ -1293,11 +1292,11 @@ Asserts that a function changes the value of a property.
 
 ### .changesBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function changes the value of a property by an amount (delta).
 
@@ -1308,10 +1307,10 @@ Asserts that a function changes the value of a property by an amount (delta).
 
 ### .doesNotChange(function, object, property, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { String } message \_optional\_
 
 Asserts that a function does not change the value of a property.
 
@@ -1322,11 +1321,11 @@ Asserts that a function does not change the value of a property.
 
 ### .changesButNotBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function does not change the value of a property or of a function’s return value by an amount (delta)
 
@@ -1337,10 +1336,10 @@ Asserts that a function does not change the value of a property or of a function
 
 ### .increases(function, object, property, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { String } message \_optional\_
 
 Asserts that a function increases a numeric object property.
 
@@ -1351,11 +1350,11 @@ Asserts that a function increases a numeric object property.
 
 ### .increasesBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function increases a numeric object property or a function’s return value by an amount (delta).
 
@@ -1366,10 +1365,10 @@ Asserts that a function increases a numeric object property or a function’s re
 
 ### .doesNotIncrease(function, object, property, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { String } message \_optional\_
 
 Asserts that a function does not increase a numeric object property.
 
@@ -1380,11 +1379,11 @@ Asserts that a function does not increase a numeric object property.
 
 ### .increasesButNotBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function does not increase a numeric object property or function’s return value by an amount (delta).
 
@@ -1395,10 +1394,10 @@ Asserts that a function does not increase a numeric object property or function�
 
 ### .decreases(function, object, property, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { String } message \_optional\_
 
 Asserts that a function decreases a numeric object property.
 
@@ -1409,11 +1408,11 @@ Asserts that a function decreases a numeric object property.
 
 ### .decreasesBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function decreases a numeric object property or a function’s return value by an amount (delta)
 
@@ -1424,10 +1423,10 @@ Asserts that a function decreases a numeric object property or a function’s re
 
 ### .doesNotDecrease(function, object, property, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { String } message \_optional\_
 
 Asserts that a function does not decreases a numeric object property.
 
@@ -1438,11 +1437,11 @@ Asserts that a function does not decreases a numeric object property.
 
 ### .doesNotDecreaseBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function does not decreases a numeric object property or a function’s return value by an amount (delta)
 
@@ -1453,11 +1452,11 @@ Asserts that a function does not decreases a numeric object property or a functi
 
 ### .decreasesButNotBy(function, object, property, delta, \[message\])
 
-*   @param { Function } modifier function
-*   @param { Object } object or getter function
-*   @param { String } property name \_optional\_
-*   @param { Number } change amount (delta)
-*   @param { String } message \_optional\_
+* @param { Function } modifier function
+* @param { Object } object or getter function
+* @param { String } property name \_optional\_
+* @param { Number } change amount (delta)
+* @param { String } message \_optional\_
 
 Asserts that a function does not decreases a numeric object property or a function’s return value by an amount (delta)
 
@@ -1468,7 +1467,7 @@ Asserts that a function does not decreases a numeric object property or a functi
 
 ### .ifError(object)
 
-*   @param { Object } object
+* @param { Object } object
 
 Asserts if value is not a false value, and throws if it is a true value. This is added to allow for chai to be a drop-in replacement for Node’s assert class.
 
@@ -1478,8 +1477,8 @@ Asserts if value is not a false value, and throws if it is a true value. This is
 
 ### .isExtensible(object)
 
-*   @param { Object } object
-*   @param { String } message \_optional\_
+* @param { Object } object
+* @param { String } message \_optional\_
 
 Asserts that `object` is extensible (can have new properties added to it).
 
@@ -1488,8 +1487,8 @@ Asserts that `object` is extensible (can have new properties added to it).
 
 ### .isNotExtensible(object)
 
-*   @param { Object } object
-*   @param { String } message \_optional\_
+* @param { Object } object
+* @param { String } message \_optional\_
 
 Asserts that `object` is _not_ extensible.
 
@@ -1504,8 +1503,8 @@ Asserts that `object` is _not_ extensible.
 
 ### .isSealed(object)
 
-*   @param { Object } object
-*   @param { String } message \_optional\_
+* @param { Object } object
+* @param { String } message \_optional\_
 
 Asserts that `object` is sealed (cannot have new properties added to it and its existing properties cannot be removed).
 
@@ -1518,8 +1517,8 @@ Asserts that `object` is sealed (cannot have new properties added to it and its 
 
 ### .isNotSealed(object)
 
-*   @param { Object } object
-*   @param { String } message \_optional\_
+* @param { Object } object
+* @param { String } message \_optional\_
 
 Asserts that `object` is _not_ sealed.
 
@@ -1528,8 +1527,8 @@ Asserts that `object` is _not_ sealed.
 
 ### .isFrozen(object)
 
-*   @param { Object } object
-*   @param { String } message \_optional\_
+* @param { Object } object
+* @param { String } message \_optional\_
 
 Asserts that `object` is frozen (cannot have new properties added to it and its existing properties cannot be modified).
 
@@ -1539,8 +1538,8 @@ Asserts that `object` is frozen (cannot have new properties added to it and its 
 
 ### .isNotFrozen(object)
 
-*   @param { Object } object
-*   @param { String } message \_optional\_
+* @param { Object } object
+* @param { String } message \_optional\_
 
 Asserts that `object` is _not_ frozen.
 
@@ -1549,8 +1548,8 @@ Asserts that `object` is _not_ frozen.
 
 ### .isEmpty(target)
 
-*   @param { Object | Array | String | Map | Set } target
-*   @param { String } message \_optional\_
+* @param { Object | Array | String | Map | Set } target
+* @param { String } message \_optional\_
 
 Asserts that the target does not contain any values. For arrays and strings, it checks the `length` property. For `Map` and `Set` instances, it checks the `size` property. For non-function objects, it gets the count of own enumerable string keys.
 
@@ -1562,8 +1561,8 @@ Asserts that the target does not contain any values. For arrays and strings, it 
 
 ### .isNotEmpty(target)
 
-*   @param { Object | Array | String | Map | Set } target
-*   @param { String } message \_optional\_
+* @param { Object | Array | String | Map | Set } target
+* @param { String } message \_optional\_
 
 Asserts that the target contains values. For arrays and strings, it checks the `length` property. For `Map` and `Set` instances, it checks the `size` property. For non-function objects, it gets the count of own enumerable string keys.
 
@@ -1571,5 +1570,3 @@ Asserts that the target contains values. For arrays and strings, it checks the `
     assert.isNotEmpty('34');
     assert.isNotEmpty(new Set([5, 6]));
     assert.isNotEmpty({ key: 7 });
-
-{% endmarkdown %}
