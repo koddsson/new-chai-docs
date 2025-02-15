@@ -5,8 +5,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "lint": "npx markdownlint pages",
-    "format": "npx markdownlint --fix pages",
+    "lint": "markdownlint pages",
+    "format": "markdownlint --fix pages",
     "test": "npm run lint"
   },
   "keywords": [],
