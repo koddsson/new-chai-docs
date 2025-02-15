@@ -2,6 +2,7 @@
   "extends": "lighthouse:default",
   "ci": {
     "collect": {
+      "maxAutodiscoverUrls": 10,
       "staticDistDir": "./dist/"
     },
     "upload": {
