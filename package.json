@@ -17,7 +17,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^5.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@tailwindcss/postcss": "^4.0.3",
+    "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
     "markdown-it": "^14.1.0",
     "markdown-it-named-headings": "^1.1.0",
