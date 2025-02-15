@@ -9,4 +9,18 @@ eleventyComputed:
 layout: "base.njk"
 ---
 
-{{ plugin.package.name }}
+<p>{{ plugin.package.description }}</p>
+
+<label for="version">Version</label>
+<input type="text" id="version" value="{{ plugin.package.version }}">
+
+<label for="license">License</label>
+<input type="text" id="license" value="{{ plugin.package.license }}">
+
+<label for="publish_date">Published</label>
+<input type="date" id="publish_date" value="{{ plugin.package.date.slice(0, 10) }}">
+
+<details>
+  <summary>Debug data</summary>
+  <code><pre>{{ plugin | jsonify }}</pre></code>
+</details>

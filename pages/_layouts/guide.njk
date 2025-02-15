@@ -1,0 +1,134 @@
+---
+layout: "base.njk"
+---
+
+<style>
+/* Style the navigation to be more compact */
+.sidebar {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Make details/summary more readable */
+.sidebar summary {
+  font-weight: bold;
+  padding: 0.4rem;
+}
+
+.sidebar details[open] > summary {
+  margin-bottom: 1rem;
+}
+
+/* Indent nested lists */
+.sidebar ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+/* Style links */
+.sidebar a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar details {
+  margin: 0;
+}
+</style>
+
+<aside>
+  <details class="sidebar">
+    <summary>Guide Navigation</summary>
+  <nav>
+    <ul>
+      <li>
+        <details>
+          <summary>Getting Started Guide</summary>
+          <ul>
+            <li><a href="/guide/#the-basics">The Basics</a></li>
+            <li><a href="/guide/#making-plugins">Making Plugins</a></li>
+            <li><a href="/guide/#exposing-globals-in-plugins">Exposing Globals in Plugins</a></li>
+            <li><a href="/guide/#guard-against-multiple-calls-to-use">Guard against multiple calls to <code>use(..)</code></a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Installation</summary>
+          <ul>
+            <li><a href="/guide/installation/#nodejs">Node.js</a></li>
+            <li><a href="/guide/installation/#browser">Browser</a></li>
+            <li><a href="/guide/installation/#other-platforms">Other Platforms</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Assertion Styles</summary>
+          <ul>
+            <li><a href="/guide/styles/#assert">Assert</a></li>
+            <li><a href="/guide/styles/#expect">Expect</a></li>
+            <li><a href="/guide/styles/#should">Should</a></li>
+            <li><a href="/guide/styles/#differences">Differences</a></li>
+            <li><a href="/guide/styles/#should-extras">Should Extras</a></li>
+            <li><a href="/guide/styles/#configuration">Configuration</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Using Chai with ESM and Plugins</summary>
+          <ul>
+            <li><a href="/guide/using-chai-with-esm-and-plugins/#importing-chai">Importing Chai</a></li>
+            <li><a href="/guide/using-chai-with-esm-and-plugins/#using-plugins">Using Plugins</a></li>
+            <li><a href="/guide/using-chai-with-esm-and-plugins/#exposing-globals-in-plugins">Exposing Globals in Plugins</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Core Plugin Concepts</summary>
+          <ul>
+            <li><a href="/guide/plugins/#accessing-utilities">Accessing Utilities</a></li>
+            <li><a href="/guide/plugins/#using-flags">Using Flags</a></li>
+            <li><a href="/guide/plugins/#composing-an-assertion">Composing an Assertion</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Building a Helper</summary>
+          <ul>
+            <li><a href="/guide/helpers/#adding-language-chains">Adding Language Chains</a></li>
+            <li><a href="/guide/helpers/#adding-properties">Adding Properties</a></li>
+            <li><a href="/guide/helpers/#adding-methods">Adding Methods</a></li>
+            <li><a href="/guide/helpers/#methods-as-properties">Methods as Properties</a></li>
+            <li><a href="/guide/helpers/#overwriting-language-chains">Overwriting Language Chains</a></li>
+            <li><a href="/guide/helpers/#overwriting-properties">Overwriting Properties</a></li>
+            <li><a href="/guide/helpers/#overwriting-methods">Overwriting Methods</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Resources</summary>
+          <ul>
+            <li><a href="/guide/resources/#getting-help">Getting Help</a></li>
+            <li><a href="/guide/resources/#contributing">Contributing</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+  </details>
+</aside>
+
+{{ content | safe }}

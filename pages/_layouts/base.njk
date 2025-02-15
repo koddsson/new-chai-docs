@@ -10,18 +10,19 @@
 </head>
 <body>
     <header class="container">
-        <h1>{{ title }}</h1>
+      <h1>{{ title }}</h1>
       <nav class="container">
         <ul>
           <li><strong><a href="/">Home</a></strong></li>
           <li><a href="/guide/">Guide</a></li>
           <li><a href="/api/">API</a></li>
+          <li><a href="/plugins/">Plugins</a></li>
           <li><a href="https://github.com/chaijs/chai" target="_blank">GitHub</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="container" style="padding-top: 0;">
       <section>
         {{ content | safe }}
       </section>
