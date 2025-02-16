@@ -22,23 +22,3 @@ layout: "api.njk"
 <ul>
   <li>The <a href="/api/test/">Online Test Suite</a> is a live run of Chai’s test suite. Use it to ensure browser compatibility.</li>
 </ul>
-
-
-<details>
-  <summary>Debug data</summary>
-
-  <details>
-    <summary>Auto-generated API docs</summary>
-    <ul>
-    {% for api in jsdoc %}
-      <li>
-        <a href="/api/{{ api.meta.path + api.meta.filename + api.meta.lineno | slugify }}/">
-          {{ api.meta.filename }}: {{ api.name }}
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
-  </details>
-
-  <code><pre>{{ jsdoc | jsonify }}</pre></code>
-</details>
