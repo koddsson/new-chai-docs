@@ -3,44 +3,49 @@ layout: "base.njk"
 ---
 
 <style>
-/* Style the navigation to be more compact */
+/* Use PicoCSS color variables for light and dark mode */
 .sidebar {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  margin-bottom: 1.5rem;
-  background: #f9f9f9;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  border: 1px solid var(--pico-dropdown-border-color);
+  padding: var(--pico-spacing);
+  margin-bottom: var(--pico-spacing);
+  background: var(--pico-card-background-color);
+  border-radius: var(--pico-border-radius);
+  transition: background 0.3s, border 0.3s;
 }
 
-/* Make details/summary more readable */
+/* PicoCSS handles dark mode automatically with [data-theme] */
+[data-theme="dark"] .sidebar {
+  background: var(--pico-card-background-color);
+  border: 1px solid var(--pico-muted-border-color);
+  color: var(--pico-contrast-medium);
+}
+
+/* Improve accessibility */
 .sidebar summary {
-  font-weight: bold;
-  padding: 0.4rem;
+  cursor: pointer;
+  color: var(--pico-primary);
 }
 
 .sidebar details[open] > summary {
-  margin-bottom: 1rem;
+  margin-bottom: var(--pico-spacing-half);
 }
 
 /* Indent nested lists */
 .sidebar ul {
   list-style: none;
-  padding-left: 1rem;
+  padding-left: var(--pico-spacing-half);
 }
 
-/* Style links */
-.sidebar a {
-  text-decoration: none;
-  color: #0073e6;
-}
-
-.sidebar a:hover {
-  text-decoration: underline;
-}
-
+/* Style <details> elements */
 .sidebar details {
   margin: 0;
+  background: inherit;
+  border-radius: var(--pico-border-radius);
+}
+
+/* Focus styles for accessibility */
+.sidebar summary:focus {
+  outline: 2px solid var(--pico-primary);
 }
 </style>
 
