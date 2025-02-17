@@ -1,0 +1,44 @@
+/* Use PicoCSS color variables for light and dark mode */
+.sidebar {
+  border: 1px solid var(--pico-dropdown-border-color);
+  padding: var(--pico-spacing);
+  margin-bottom: var(--pico-spacing);
+  background: var(--pico-card-background-color);
+  border-radius: var(--pico-border-radius);
+  transition: background 0.3s, border 0.3s;
+}
+
+/* PicoCSS handles dark mode automatically with [data-theme] */
+[data-theme="dark"] .sidebar {
+  background: var(--pico-card-background-color);
+  border: 1px solid var(--pico-muted-border-color);
+  color: var(--pico-contrast-medium);
+}
+
+/* Improve accessibility */
+.sidebar summary {
+  cursor: pointer;
+  color: var(--pico-primary);
+}
+
+.sidebar details[open] > summary {
+  margin-bottom: var(--pico-spacing-half);
+}
+
+/* Indent nested lists */
+.sidebar ul {
+  list-style: none;
+  padding-left: var(--pico-spacing-half);
+}
+
+/* Style <details> elements */
+.sidebar details {
+  margin: 0;
+  background: inherit;
+  border-radius: var(--pico-border-radius);
+}
+
+/* Focus styles for accessibility */
+.sidebar summary:focus {
+  outline: 2px solid var(--pico-primary);
+}

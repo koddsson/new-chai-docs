@@ -2,137 +2,90 @@
 layout: "base.njk"
 ---
 
-<style>
-/* Use PicoCSS color variables for light and dark mode */
-.sidebar {
-  border: 1px solid var(--pico-dropdown-border-color);
-  padding: var(--pico-spacing);
-  margin-bottom: var(--pico-spacing);
-  background: var(--pico-card-background-color);
-  border-radius: var(--pico-border-radius);
-  transition: background 0.3s, border 0.3s;
-}
-
-/* PicoCSS handles dark mode automatically with [data-theme] */
-[data-theme="dark"] .sidebar {
-  background: var(--pico-card-background-color);
-  border: 1px solid var(--pico-muted-border-color);
-  color: var(--pico-contrast-medium);
-}
-
-/* Improve accessibility */
-.sidebar summary {
-  cursor: pointer;
-  color: var(--pico-primary);
-}
-
-.sidebar details[open] > summary {
-  margin-bottom: var(--pico-spacing-half);
-}
-
-/* Indent nested lists */
-.sidebar ul {
-  list-style: none;
-  padding-left: var(--pico-spacing-half);
-}
-
-/* Style <details> elements */
-.sidebar details {
-  margin: 0;
-  background: inherit;
-  border-radius: var(--pico-border-radius);
-}
-
-/* Focus styles for accessibility */
-.sidebar summary:focus {
-  outline: 2px solid var(--pico-primary);
-}
-</style>
-
 <aside>
   <details class="sidebar">
     <summary>Guide Navigation</summary>
-  <nav>
-    <ul>
-      <li>
-        <details>
-          <summary>Getting Started Guide</summary>
-          <ul>
-            <li><a href="/guide/#the-basics">The Basics</a></li>
-            <li><a href="/guide/#making-plugins">Making Plugins</a></li>
-            <li><a href="/guide/#exposing-globals-in-plugins">Exposing Globals in Plugins</a></li>
-            <li><a href="/guide/#guard-against-multiple-calls-to-use">Guard against multiple calls to <code>use(..)</code></a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Installation</summary>
-          <ul>
-            <li><a href="/guide/installation/#nodejs">Node.js</a></li>
-            <li><a href="/guide/installation/#browser">Browser</a></li>
-            <li><a href="/guide/installation/#other-platforms">Other Platforms</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Assertion Styles</summary>
-          <ul>
-            <li><a href="/guide/styles/#assert">Assert</a></li>
-            <li><a href="/guide/styles/#expect">Expect</a></li>
-            <li><a href="/guide/styles/#should">Should</a></li>
-            <li><a href="/guide/styles/#differences">Differences</a></li>
-            <li><a href="/guide/styles/#should-extras">Should Extras</a></li>
-            <li><a href="/guide/styles/#configuration">Configuration</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Using Chai with ESM and Plugins</summary>
-          <ul>
-            <li><a href="/guide/using-chai-with-esm-and-plugins/#importing-chai">Importing Chai</a></li>
-            <li><a href="/guide/using-chai-with-esm-and-plugins/#using-plugins">Using Plugins</a></li>
-            <li><a href="/guide/using-chai-with-esm-and-plugins/#exposing-globals-in-plugins">Exposing Globals in Plugins</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Core Plugin Concepts</summary>
-          <ul>
-            <li><a href="/guide/plugins/#accessing-utilities">Accessing Utilities</a></li>
-            <li><a href="/guide/plugins/#using-flags">Using Flags</a></li>
-            <li><a href="/guide/plugins/#composing-an-assertion">Composing an Assertion</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Building a Helper</summary>
-          <ul>
-            <li><a href="/guide/helpers/#adding-language-chains">Adding Language Chains</a></li>
-            <li><a href="/guide/helpers/#adding-properties">Adding Properties</a></li>
-            <li><a href="/guide/helpers/#adding-methods">Adding Methods</a></li>
-            <li><a href="/guide/helpers/#methods-as-properties">Methods as Properties</a></li>
-            <li><a href="/guide/helpers/#overwriting-language-chains">Overwriting Language Chains</a></li>
-            <li><a href="/guide/helpers/#overwriting-properties">Overwriting Properties</a></li>
-            <li><a href="/guide/helpers/#overwriting-methods">Overwriting Methods</a></li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <details>
-          <summary>Resources</summary>
-          <ul>
-            <li><a href="/guide/resources/#getting-help">Getting Help</a></li>
-            <li><a href="/guide/resources/#contributing">Contributing</a></li>
-          </ul>
-        </details>
-      </li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li>
+          <details>
+            <summary>Getting Started Guide</summary>
+            <ul>
+              <li><a href="/guide/#the-basics">The Basics</a></li>
+              <li><a href="/guide/#making-plugins">Making Plugins</a></li>
+              <li><a href="/guide/#exposing-globals-in-plugins">Exposing Globals in Plugins</a></li>
+              <li><a href="/guide/#guard-against-multiple-calls-to-use">Guard against multiple calls to <code>use(..)</code></a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Installation</summary>
+            <ul>
+              <li><a href="/guide/installation/#nodejs">Node.js</a></li>
+              <li><a href="/guide/installation/#browser">Browser</a></li>
+              <li><a href="/guide/installation/#other-platforms">Other Platforms</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Assertion Styles</summary>
+            <ul>
+              <li><a href="/guide/styles/#assert">Assert</a></li>
+              <li><a href="/guide/styles/#expect">Expect</a></li>
+              <li><a href="/guide/styles/#should">Should</a></li>
+              <li><a href="/guide/styles/#differences">Differences</a></li>
+              <li><a href="/guide/styles/#should-extras">Should Extras</a></li>
+              <li><a href="/guide/styles/#configuration">Configuration</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+              <summary>Using Chai with ESM and Plugins</summary>
+            <ul>
+              <li><a href="/guide/using-chai-with-esm-and-plugins/#importing-chai">Importing Chai</a></li>
+              <li><a href="/guide/using-chai-with-esm-and-plugins/#using-plugins">Using Plugins</a></li>
+              <li><a href="/guide/using-chai-with-esm-and-plugins/#exposing-globals-in-plugins">Exposing Globals in Plugins</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Core Plugin Concepts</summary>
+            <ul>
+              <li><a href="/guide/plugins/#accessing-utilities">Accessing Utilities</a></li>
+              <li><a href="/guide/plugins/#using-flags">Using Flags</a></li>
+              <li><a href="/guide/plugins/#composing-an-assertion">Composing an Assertion</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Building a Helper</summary>
+            <ul>
+              <li><a href="/guide/helpers/#adding-language-chains">Adding Language Chains</a></li>
+              <li><a href="/guide/helpers/#adding-properties">Adding Properties</a></li>
+              <li><a href="/guide/helpers/#adding-methods">Adding Methods</a></li>
+              <li><a href="/guide/helpers/#methods-as-properties">Methods as Properties</a></li>
+              <li><a href="/guide/helpers/#overwriting-language-chains">Overwriting Language Chains</a></li>
+              <li><a href="/guide/helpers/#overwriting-properties">Overwriting Properties</a></li>
+              <li><a href="/guide/helpers/#overwriting-methods">Overwriting Methods</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Resources</summary>
+            <ul>
+              <li><a href="/guide/resources/#getting-help">Getting Help</a></li>
+              <li><a href="/guide/resources/#contributing">Contributing</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
   </details>
 </aside>
 
