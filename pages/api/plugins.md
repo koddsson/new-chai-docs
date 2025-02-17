@@ -11,7 +11,7 @@ The plugin utilities are for those who want to extend Chai with their own set of
 
 - @param { Object } ctx object to which the method is added
 - @param { String } name of method to add
-- @param { Function } method function to be used for \`name\`, when called
+- @param { Function } method function to be used for `name`, when called
 - @param { Function } chainingBehavior function to be called every time the property is accessed
 
 Adds a method to an object, such that the method can also be chained.
@@ -122,7 +122,7 @@ Ensures that the object being tested against is of a valid type.
 utils.expectTypes(this, ["array", "object", "string"]);
 ```
 
-### .flag(object, key, \[value\])
+### .flag(object, key, [value])
 
 - @param { Object } object constructed Assertion
 - @param { String } key
@@ -135,7 +135,7 @@ utils.flag(this, "foo", "bar"); // setter
 utils.flag(this, "foo"); // getter, returns `bar`
 ```
 
-### .getActual(object, \[actual\])
+### .getActual(object, [actual])
 
 - @param { Object } object (constructed Assertion)
 - @param { Arguments } chai.Assertion.prototype.assert arguments
@@ -160,7 +160,7 @@ Message template tags:
 - @param { Object } object (constructed Assertion)
 - @param { Arguments } chai.Assertion.prototype.assert arguments
 
-Extract the operator from error message. Operator defined is based on below link <https://nodejs.org/api/assert.html#assert\_assert>.
+Extract the operator from error message. Operator defined is based on below link <https://nodejs.org/api/assert.html#assert_assert>.
 
 Returns the `operator` or `undefined` value for an Assertion.
 
@@ -182,7 +182,7 @@ This allows the retrieval of directly-owned enumerable property symbols of an ob
 
 This allows the retrieval of property names of an object, enumerable or not, inherited or not.
 
-### .inspect(obj, \[showHidden\], \[depth\], \[colors\])
+### .inspect(obj, [showHidden], [depth], [colors])
 
 - @param { Object } obj The object to print out.
 - @param { Boolean } showHidden Flag that shows hidden (not enumerable) properties of objects. Default is false.

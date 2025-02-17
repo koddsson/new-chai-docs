@@ -19,7 +19,7 @@ Browser tests are currently known to pass in Chrome 16 and Firefox 8. Please let
 
 It's quite simple:
 
-```js
+```bash
 make test
 ```
 
@@ -31,13 +31,13 @@ It's also quite simple. Open up `test/browser/index.html` in your nearest browse
 
 If you have made changes to any of the components, you must rebuild the browser package:
 
-```js
-make
+```bash
+make;
 ```
 
 ## Contributors
 
-```js
+```bash
 repo age : 1 year, 5 months
 active   : 123 days
 commits  : 638
