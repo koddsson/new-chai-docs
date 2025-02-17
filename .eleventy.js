@@ -21,7 +21,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy({
-    "public/": "/assets/",
+    "public/": "/",
   });
 
   eleventyConfig.addFilter("jsonify", function (data) {
