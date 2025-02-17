@@ -1,15 +1,19 @@
-import markdownit from "markdown-it";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
 
 // Needed for GitHub Pages
 export const config = {
   pathPrefix: "/new-chai-docs/",
 };
 
-const md = markdownit();
+const md = markdownIt({ html: true }).use(markdownItAnchor);
 
 export default function (eleventyConfig) {
+  eleventyConfig.setLibrary("md", md);
+
   // Enable syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
 

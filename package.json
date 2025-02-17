@@ -20,7 +20,7 @@
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
     "markdown-it": "^14.1.0",
-    "markdown-it-named-headings": "^1.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "markdownlint": "^0.37.4",
     "markdownlint-cli": "^0.44.0",
     "postcss": "^8.5.2",
