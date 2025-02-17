@@ -12,9 +12,9 @@ This section of the guide introduces you to the three different assertion styles
 The assert style is exposed through the `assert` interface. This provides the classic assert-dot notation, similar to that packaged with Node.js. This assert module, however, provides several additional tests and is browser compatible.
 
 ```js
-var assert = require("chai").assert;
-var foo = "bar";
-var beverages = { tea: ["chai", "matcha", "oolong"] };
+let assert = require("chai").assert;
+let foo = "bar";
+let beverages = { tea: ["chai", "matcha", "oolong"] };
 
 assert.typeOf(foo, "string"); // without optional message
 assert.typeOf(foo, "string", "foo is a string"); // with optional message
@@ -36,9 +36,9 @@ The BDD style comes in two flavors: `expect` and `should`. Both use the same cha
 The BDD style is exposed through the `expect` or `should` interfaces. In both scenarios, you chain together natural language assertions.
 
 ```js
-var expect = require("chai").expect;
-var foo = "bar";
-var beverages = { tea: ["chai", "matcha", "oolong"] };
+let expect = require("chai").expect;
+let foo = "bar";
+let beverages = { tea: ["chai", "matcha", "oolong"] };
 
 expect(foo).to.be.a("string");
 expect(foo).to.equal("bar");
@@ -49,7 +49,7 @@ expect(beverages).to.have.property("tea").with.lengthOf(3);
 `Expect` also allows you to include arbitrary messages to prepend to any failed assertions that might occur.
 
 ```js
-var answer = 43;
+let answer = 43;
 
 // AssertionError: expected 43 to equal 42.
 expect(answer).to.equal(42);
@@ -65,9 +65,9 @@ This comes in handy when being used with non-descript topics such as booleans or
 The `should` style allows for the same chainable assertions as the `expect` interface; however, it extends each object with a `should` property to start your chain. This style has some issues when used with Internet Explorer, so be aware of browser compatibility.
 
 ```js
-var should = require("chai").should(); // actually call the function
-var foo = "bar";
-var beverages = { tea: ["chai", "matcha", "oolong"] };
+let should = require("chai").should(); // actually call the function
+let foo = "bar";
+let beverages = { tea: ["chai", "matcha", "oolong"] };
 
 foo.should.be.a("string");
 foo.should.equal("bar");
@@ -80,9 +80,9 @@ beverages.should.have.property("tea").with.lengthOf(3);
 First of all, notice that the `expect` require is just a reference to the `expect` function, whereas with the `should` require, the function is being executed.
 
 ```js
-var chai = require("chai");
-var expect = chai.expect;
-var should = chai.should();
+let chai = require("chai");
+let expect = chai.expect;
+let should = chai.should();
 ```
 
 The `expect` interface provides a function as a starting point for chaining your language assertions. It works on Node.js and in all browsers.
@@ -103,7 +103,7 @@ db.get(1234, function (err, doc) {
 Given that `err` should be null or undefined, `err.should.not.exist` is not a valid statement as `undefined` and `null` haven’t been extended with a `should` chain starter. As such, the appropriate assertions for this scenario are:
 
 ```js
-var should = require("chai").should(); // actually call the function
+let should = require("chai").should(); // actually call the function
 
 should.not.exist(err);
 should.exist(doc);
