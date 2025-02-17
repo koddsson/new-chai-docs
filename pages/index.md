@@ -96,9 +96,9 @@ Plugins extend Chai's assertions to new contexts such as vendor integration & ob
 Create expressive integration tests with Chai and [selenium-webdriver](https://www.npmjs.org/package/selenium-webdriver).
 
 ```javascript
-import sw = from 'selenium-webdriver';
-import { expect, use } from 'chai';
-import chaiWebdriver from 'chai-webdriver';
+import sw from "selenium-webdriver";
+import { expect, use } from "chai";
+import chaiWebdriver from "chai-webdriver";
 
 const driver = new sw.Builder()
   .withCapabilities(sw.Capabilities.chrome())

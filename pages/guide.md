@@ -35,7 +35,7 @@ instead of adding it as a property in the chai object:
 ```javascript
 // An example of a good plugin:
 
-export const myGlobal = {...};
+export const myGlobal = {};
 
 export default function myPlugin(chai, utils) {
   // Plugin implementation
@@ -48,19 +48,21 @@ Avoid exposing globals only through `chai.use()` without making them available
 for import, as this can lead to issues when trying to use the global across
 multiple files:
 
-```javascript
-// An example of a plugin which may have issues:
+An example of a plugin which may have issues:
 
-const myGlobal = {...};
+```javascript
+const myGlobal = {};
 
 export default function myPlugin(chai, utils) {
   chai.myGlobal = myGlobal;
 }
+```
 
-// Another example of a plugin which may have issues:
+Another example of a plugin which may have issues:
 
+```js
 export default function myPlugin(chai, utils) {
-  chai.myGlobal = {...};
+  chai.myGlobal = {};
 }
 ```
 

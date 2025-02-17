@@ -99,12 +99,12 @@ For this, each constructed `Assertion` has a method called simply `assert`. It a
 To begin, we will construct Arthur again, then we can assert that he is who he says he is.
 
 ```js
-var arthur = new Assertion('Arthur Dent');
+var arthur = new Assertion("Arthur Dent");
 
 arthur.assert(
-  arthur.\_obj === 'Arthur Dent',
+  arthur._obj === "Arthur Dent",
   "expected #{this} to be 'Arthur Dent'",
-  "expected #{this} to not be 'Arthur Dent'"
+  "expected #{this} to not be 'Arthur Dent'",
 );
 ```
 

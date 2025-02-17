@@ -153,10 +153,10 @@ Note that `.all` is used by default when neither `.all` nor `.any` are added ear
 
 See the `.keys` doc for guidance on when to use `.any` or `.all`.
 
-### .a(type\[, msg\])
+### .a(type[, msg])
 
 - @param { String } type
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target’s type is equal to the given string `type`. Types are case insensitive. See the `type-detect` project page for info on the type detection algorithm: <https://github.com/chaijs/type-detect>.
 
@@ -210,10 +210,10 @@ expect({ b: 2 }).to.have.a.property("b");
 
 The alias `.an` can be used interchangeably with `.a`.
 
-### .include(val\[, msg\])
+### .include(val[, msg])
 
 - @param { Mixed } val
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 When the target is a string, `.include` asserts that the given string `val` is a substring of the target.
 
@@ -609,10 +609,10 @@ expect({}, "nooo why fail??").to.be.arguments;
 
 The alias `.Arguments` can be used interchangeably with `.arguments`.
 
-### .equal(val\[, msg\])
+### .equal(val[, msg])
 
 - @param { Mixed } val
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is strictly (`===`) equal to the given `val`.
 
@@ -649,10 +649,10 @@ expect(1, "nooo why fail??").to.equal(2);
 
 The aliases `.equals` and `eq` can be used interchangeably with `.equal`.
 
-### .eql(obj\[, msg\])
+### .eql(obj[, msg])
 
 - @param { Mixed } obj
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is deeply equal to the given `obj`. See the `deep-eql` project page for info on the deep equality algorithm: <https://github.com/chaijs/deep-eql>.
 
@@ -682,10 +682,10 @@ The alias `.eqls` can be used interchangeably with `.eql`.
 
 The `.deep.equal` assertion is almost identical to `.eql` but with one difference: `.deep.equal` causes deep equality comparisons to also be used for any other assertions that follow in the chain.
 
-### .above(n\[, msg\])
+### .above(n[, msg])
 
 - @param { Number } n
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a number or a date greater than the given number or date `n` respectively. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -720,10 +720,10 @@ expect(1, "nooo why fail??").to.be.above(2);
 
 The aliases `.gt` and `.greaterThan` can be used interchangeably with `.above`.
 
-### .least(n\[, msg\])
+### .least(n[, msg])
 
 - @param { Number } n
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a number or a date greater than or equal to the given number or date `n` respectively. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -759,10 +759,10 @@ expect(1, "nooo why fail??").to.be.at.least(2);
 
 The aliases `.gte` and `.greaterThanOrEqual` can be used interchangeably with `.least`.
 
-### .below(n\[, msg\])
+### .below(n[, msg])
 
 - @param { Number } n
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a number or a date less than the given number or date `n` respectively. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -797,10 +797,10 @@ expect(2, "nooo why fail??").to.be.below(1);
 
 The aliases `.lt` and `.lessThan` can be used interchangeably with `.below`.
 
-### .most(n\[, msg\])
+### .most(n[, msg])
 
 - @param { Number } n
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a number or a date less than or equal to the given number or date `n` respectively. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -836,11 +836,11 @@ expect(2, "nooo why fail??").to.be.at.most(1);
 
 The aliases `.lte` and `.lessThanOrEqual` can be used interchangeably with `.most`.
 
-### .within(start, finish\[, msg\])
+### .within(start, finish[, msg])
 
 - @param { Number } start lower bound inclusive
 - @param { Number } finish upper bound inclusive
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a number or a date greater than or equal to the given number or date `start`, and less than or equal to the given number or date `finish` respectively. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -875,10 +875,10 @@ expect(4).to.be.within(1, 3, "nooo why fail??");
 expect(4, "nooo why fail??").to.be.within(1, 3);
 ```
 
-### .instanceof(constructor\[, msg\])
+### .instanceof(constructor[, msg])
 
 - @param { Constructor } constructor
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is an instance of the given `constructor`.
 
@@ -909,11 +909,11 @@ Due to limitations in ES5, `.instanceof` may not always work as expected when us
 
 The alias `.instanceOf` can be used interchangeably with `.instanceof`.
 
-### .property(name\[, val\[, msg\]\])
+### .property(name[, val[, msg]])
 
 - @param { String } name
 - @param { Mixed } val (optional)
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target has a property with the given key `name`.
 
@@ -1019,11 +1019,11 @@ The above assertion isn’t the same thing as not providing `val`. Instead, it�
 
 The assertions `.ownProperty` and `.haveOwnProperty` can be used interchangeably with `.own.property`.
 
-### .ownPropertyDescriptor(name\[, descriptor\[, msg\]\])
+### .ownPropertyDescriptor(name[, descriptor[, msg]])
 
 - @param { String } name
-- @param { Object } descriptor \_optional\_
-- @param { String } msg \_optional\_
+- @param { Object } descriptor _optional_
+- @param { String } msg _optional_
 
 Asserts that the target has its own property descriptor with the given key `name`. Enumerable and non-enumerable properties are included in the search.
 
@@ -1131,10 +1131,10 @@ The above assertion isn’t the same thing as not providing `descriptor`. Instea
 
 The alias `.haveOwnPropertyDescriptor` can be used interchangeably with `.ownPropertyDescriptor`.
 
-### .lengthOf(n\[, msg\])
+### .lengthOf(n[, msg])
 
 - @param { Number } n
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target’s `length` or `size` is equal to the given number `n`.
 
@@ -1186,10 +1186,10 @@ expect([1, 2, 3]).to.have.a.length(3); // incompatible; throws error
 expect([1, 2, 3]).to.have.a.lengthOf(3); // passes as expected
 ```
 
-### .match(re\[, msg\])
+### .match(re[, msg])
 
 - @param { RegExp } re
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target matches the given regular expression `re`.
 
@@ -1212,10 +1212,10 @@ expect("foobar", "nooo why fail??").to.match(/taco/);
 
 The alias `.matches` can be used interchangeably with `.match`.
 
-### .string(str\[, msg\])
+### .string(str[, msg])
 
 - @param { String } str
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target string contains the given substring `str`.
 
@@ -1236,7 +1236,7 @@ expect("foobar").to.have.string("taco", "nooo why fail??");
 expect("foobar", "nooo why fail??").to.have.string("taco");
 ```
 
-### .keys(key1\[, key2\[, …\]\])
+### .keys(key1[, key2[, …]])
 
 - @param { String | Array | Object } keys
 
@@ -1337,11 +1337,11 @@ expect({ a: 1 }, "nooo why fail??").to.have.key("b");
 
 The alias `.key` can be used interchangeably with `.keys`.
 
-### .throw(\[errorLike\], \[errMsgMatcher\], \[msg\])
+### .throw([errorLike], [errMsgMatcher], [msg])
 
 - @param { Error | ErrorConstructor } errorLike
 - @param { String | RegExp } errMsgMatcher error message
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 - @see [https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types)
 
 When no arguments are provided, `.throw` invokes the target function and asserts that an error is thrown.
@@ -1495,10 +1495,10 @@ Finally, it’s worth mentioning that it’s a best practice in JavaScript to on
 
 The aliases `.throws` and `.Throw` can be used interchangeably with `.throw`.
 
-### .respondTo(method\[, msg\])
+### .respondTo(method[, msg])
 
 - @param { String } method
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 When the target is a non-function object, `.respondTo` asserts that the target has a method with the given name `method`. The method can be own or inherited, and it can be enumerable or non-enumerable.
 
@@ -1567,10 +1567,10 @@ Cat.hiss = function () {};
 expect(Cat).itself.to.respondTo("hiss").but.not.respondTo("meow");
 ```
 
-### .satisfy(matcher\[, msg\])
+### .satisfy(matcher[, msg])
 
 - @param { Function } matcher
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Invokes the given `matcher` function with the target being passed as the first argument, and asserts that the value returned is truthy.
 
@@ -1602,11 +1602,11 @@ expect(1, "nooo why fail??").to.satisfy(function (num) {
 
 The alias `.satisfies` can be used interchangeably with `.satisfy`.
 
-### .closeTo(expected, delta\[, msg\])
+### .closeTo(expected, delta[, msg])
 
 - @param { Number } expected
 - @param { Number } delta
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a number that’s within a given +/- `delta` range of the given number `expected`. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -1636,10 +1636,10 @@ expect(1.5, "nooo why fail??").to.be.closeTo(3, 1);
 
 The alias `.approximately` can be used interchangeably with `.closeTo`.
 
-### .members(set\[, msg\])
+### .members(set[, msg])
 
 - @param { Array } set
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target array has the same members as the given array `set`.
 
@@ -1696,10 +1696,10 @@ expect([1, 2]).to.have.members([1, 2, 3], "nooo why fail??");
 expect([1, 2], "nooo why fail??").to.have.members([1, 2, 3]);
 ```
 
-### .oneOf(list\[, msg\])
+### .oneOf(list[, msg])
 
 - @param { Array.<\*> } list
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 Asserts that the target is a member of the given array `list`. However, it’s often best to assert that the target is equal to its expected value.
 
@@ -1733,11 +1733,11 @@ expect(1).to.be.oneOf([2, 3, 4], "nooo why fail??");
 expect(1, "nooo why fail??").to.be.oneOf([2, 3, 4]);
 ```
 
-### .change(subject\[, prop\[, msg\]\])
+### .change(subject[, prop[, msg]])
 
 - @param { String } subject
-- @param { String } prop name \_optional\_
-- @param { String } msg \_optional\_
+- @param { String } prop name _optional_
+- @param { String } msg _optional_
 
 When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward. However, it’s often best to assert that `subject` is equal to its expected value.
 
@@ -1836,11 +1836,11 @@ expect(subtractTwo).to.change(myObj, "val").by(2); // Not recommended
 
 The alias `.changes` can be used interchangeably with `.change`.
 
-### .increase(subject\[, prop\[, msg\]\])
+### .increase(subject[, prop[, msg]])
 
 - @param { String | Function } subject
-- @param { String } prop name \_optional\_
-- @param { String } msg \_optional\_
+- @param { String } prop name _optional_
+- @param { String } msg _optional_
 
 When one argument is provided, `.increase` asserts that the given function `subject` returns a greater number when it’s invoked after invoking the target function compared to when it’s invoked beforehand. `.increase` also causes all `.by` assertions that follow in the chain to assert how much greater of a number is returned. It’s often best to assert that the return value increased by the expected amount, rather than asserting it increased by any amount.
 
@@ -1912,11 +1912,11 @@ expect(noop, "nooo why fail??").to.increase(getVal);
 
 The alias `.increases` can be used interchangeably with `.increase`.
 
-### .decrease(subject\[, prop\[, msg\]\])
+### .decrease(subject[, prop[, msg]])
 
 - @param { String | Function } subject
-- @param { String } prop name \_optional\_
-- @param { String } msg \_optional\_
+- @param { String } prop name _optional_
+- @param { String } msg _optional_
 
 When one argument is provided, `.decrease` asserts that the given function `subject` returns a lesser number when it’s invoked after invoking the target function compared to when it’s invoked beforehand. `.decrease` also causes all `.by` assertions that follow in the chain to assert how much lesser of a number is returned. It’s often best to assert that the return value decreased by the expected amount, rather than asserting it decreased by any amount.
 
@@ -1988,10 +1988,10 @@ expect(noop, "nooo why fail??").to.decrease(getVal);
 
 The alias `.decreases` can be used interchangeably with `.decrease`.
 
-### .by(delta\[, msg\])
+### .by(delta[, msg])
 
 - @param { Number } delta
-- @param { String } msg \_optional\_
+- @param { String } msg _optional_
 
 When following an `.increase` assertion in the chain, `.by` asserts that the subject of the `.increase` assertion increased by the given `delta`.
 
@@ -2179,9 +2179,9 @@ A custom error message can be given as the second argument to `expect`.
 expect("foo", "nooo why fail??").to.be.finite;
 ```
 
-### .fail(\[message\])
+### .fail([message])
 
-### .fail(actual, expected, \[message\], \[operator\])
+### .fail(actual, expected, [message], [operator])
 
 - @param { Mixed } actual
 - @param { Mixed } expected
