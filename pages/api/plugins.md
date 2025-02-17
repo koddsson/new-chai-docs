@@ -18,7 +18,7 @@ Adds a method to an object, such that the method can also be chained.
 
 ```js
 utils.addChainableMethod(chai.Assertion.prototype, "foo", function (str) {
-  var obj = utils.flag(this, "object");
+  let obj = utils.flag(this, "object");
   new chai.Assertion(obj).to.be.equal(str);
 });
 ```
@@ -60,7 +60,7 @@ Adds a method to the prototype of an object.
 
 ```js
 utils.addMethod(chai.Assertion.prototype, "foo", function (str) {
-  var obj = utils.flag(this, "object");
+  let obj = utils.flag(this, "object");
   new chai.Assertion(obj).to.be.equal(str);
 });
 ```
@@ -87,7 +87,7 @@ Adds a property to the prototype of an object.
 
 ```js
 utils.addProperty(chai.Assertion.prototype, "foo", function () {
-  var obj = utils.flag(this, "object");
+  let obj = utils.flag(this, "object");
   new chai.Assertion(obj).to.be.instanceof(Foo);
 });
 ```
@@ -243,7 +243,7 @@ Overwrites an already existing method and provides access to previous function. 
 ```js
 utils.overwriteMethod(chai.Assertion.prototype, "equal", function (_super) {
   return function (str) {
-    var obj = utils.flag(this, "object");
+    let obj = utils.flag(this, "object");
     if (obj instanceof Foo) {
       new chai.Assertion(obj.value).to.equal(str);
     } else {
@@ -276,7 +276,7 @@ Overwrites an already existing property getter and provides access to previous v
 ```js
 utils.overwriteProperty(chai.Assertion.prototype, "ok", function (_super) {
   return function () {
-    var obj = utils.flag(this, "object");
+    let obj = utils.flag(this, "object");
     if (obj instanceof Foo) {
       new chai.Assertion(obj.name).to.equal("bar");
     } else {
@@ -323,10 +323,10 @@ Test an object for expression.
 Transfer all the flags for `assertion` to `object`. If `includeAll` is set to `false`, then the base Chai assertion flags (namely `object`, `ssfi`, `lockSsfi`, and `message`) will not be transferred.
 
 ```js
-var newAssertion = new Assertion();
+let newAssertion = new Assertion();
 utils.transferFlags(assertion, newAssertion);
 
-var anotherAssertion = new Assertion(myObj);
+let anotherAssertion = new Assertion(myObj);
 utils.transferFlags(assertion, anotherAssertion, false);
 ```
 
@@ -379,7 +379,7 @@ This allows checking whether an object has own or inherited from prototype chain
 Basically does the same thing as the `in` operator but works properly with null/undefined values and other primitives.
 
 ```js
-var obj = {
+let obj = {
   arr: ["a", "b", "c"],
   str: "Hello",
 };
@@ -423,7 +423,7 @@ The path info consists of an object with the following properties:
 This allows the retrieval of values in an object given a string path.
 
 ```js
-var obj = {
+let obj = {
   prop1: {
     arr: ["a", "b", "c"],
     str: "Hello",

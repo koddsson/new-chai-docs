@@ -193,7 +193,7 @@ assert.isAtMost(4, 4, "4 is less than or equal to 4");
 Asserts that `value` is true.
 
 ```js
-var teaServed = true;
+let teaServed = true;
 assert.isTrue(teaServed, "the tea has been served");
 ```
 
@@ -205,7 +205,7 @@ assert.isTrue(teaServed, "the tea has been served");
 Asserts that `value` is not true.
 
 ```js
-var tea = "tasty chai";
+let tea = "tasty chai";
 assert.isNotTrue(tea, "great, time for tea!");
 ```
 
@@ -217,7 +217,7 @@ assert.isNotTrue(tea, "great, time for tea!");
 Asserts that `value` is false.
 
 ```js
-var teaServed = false;
+let teaServed = false;
 assert.isFalse(teaServed, "no tea yet? hmm...");
 ```
 
@@ -229,7 +229,7 @@ assert.isFalse(teaServed, "no tea yet? hmm...");
 Asserts that `value` is not false.
 
 ```js
-var tea = "tasty chai";
+let tea = "tasty chai";
 assert.isNotFalse(tea, "great, time for tea!");
 ```
 
@@ -252,7 +252,7 @@ assert.isNull(err, "there was no error");
 Asserts that `value` is not null.
 
 ```js
-var tea = "tasty chai";
+let tea = "tasty chai";
 assert.isNotNull(tea, "great, time for tea!");
 ```
 
@@ -286,7 +286,7 @@ assert.isNotNaN(4, "4 is not NaN");
 Asserts that the target is neither `null` nor `undefined`.
 
 ```js
-var foo = "hi";
+let foo = "hi";
 
 assert.exists(foo, "foo is neither `null` nor `undefined`");
 ```
@@ -299,7 +299,7 @@ assert.exists(foo, "foo is neither `null` nor `undefined`");
 Asserts that the target is either `null` or `undefined`.
 
 ```js
-var bar = null,
+let bar = null,
   baz;
 
 assert.notExists(bar);
@@ -314,7 +314,7 @@ assert.notExists(baz, "baz is either null or undefined");
 Asserts that `value` is `undefined`.
 
 ```js
-var tea;
+let tea;
 assert.isUndefined(tea, "no tea defined");
 ```
 
@@ -326,7 +326,7 @@ assert.isUndefined(tea, "no tea defined");
 Asserts that `value` is not `undefined`.
 
 ```js
-var tea = "cup of chai";
+let tea = "cup of chai";
 assert.isDefined(tea, "tea has been defined");
 ```
 
@@ -352,7 +352,7 @@ assert.isFunction(serveTea, "great, we can have tea now");
 Asserts that `value` is _not_ a function.
 
 ```js
-var serveTea = ["heat", "pour", "sip"];
+let serveTea = ["heat", "pour", "sip"];
 assert.isNotFunction(serveTea, "great, we have listed the steps");
 ```
 
@@ -364,7 +364,7 @@ assert.isNotFunction(serveTea, "great, we have listed the steps");
 Asserts that `value` is an object of type ‘Object’ (as revealed by `Object.prototype.toString`). _The assertion does not match subclassed objects._
 
 ```js
-var selection = { name: "Chai", serve: "with spices" };
+let selection = { name: "Chai", serve: "with spices" };
 assert.isObject(selection, "tea selection is an object");
 ```
 
@@ -376,7 +376,7 @@ assert.isObject(selection, "tea selection is an object");
 Asserts that `value` is _not_ an object of type ‘Object’ (as revealed by `Object.prototype.toString`).
 
 ```js
-var selection = "chai";
+let selection = "chai";
 assert.isNotObject(selection, "tea selection is not an object");
 assert.isNotObject(null, "null is not an object");
 ```
@@ -389,7 +389,7 @@ assert.isNotObject(null, "null is not an object");
 Asserts that `value` is an array.
 
 ```js
-var menu = ["green", "chai", "oolong"];
+let menu = ["green", "chai", "oolong"];
 assert.isArray(menu, "what kind of tea do we want?");
 ```
 
@@ -401,7 +401,7 @@ assert.isArray(menu, "what kind of tea do we want?");
 Asserts that `value` is _not_ an array.
 
 ```js
-var menu = "green|chai|oolong";
+let menu = "green|chai|oolong";
 assert.isNotArray(menu, "what kind of tea do we want?");
 ```
 
@@ -413,7 +413,7 @@ assert.isNotArray(menu, "what kind of tea do we want?");
 Asserts that `value` is a string.
 
 ```js
-var teaOrder = "chai";
+let teaOrder = "chai";
 assert.isString(teaOrder, "order placed");
 ```
 
@@ -425,7 +425,7 @@ assert.isString(teaOrder, "order placed");
 Asserts that `value` is _not_ a string.
 
 ```js
-var teaOrder = 4;
+let teaOrder = 4;
 assert.isNotString(teaOrder, "order placed");
 ```
 
@@ -437,7 +437,7 @@ assert.isNotString(teaOrder, "order placed");
 Asserts that `value` is a number.
 
 ```js
-var cups = 2;
+let cups = 2;
 assert.isNumber(cups, "how many cups");
 ```
 
@@ -449,7 +449,7 @@ assert.isNumber(cups, "how many cups");
 Asserts that `value` is _not_ a number.
 
 ```js
-var cups = "2 cups please";
+let cups = "2 cups please";
 assert.isNotNumber(cups, "how many cups");
 ```
 
@@ -461,7 +461,7 @@ assert.isNotNumber(cups, "how many cups");
 Asserts that `value` is a finite number. Unlike `.isNumber`, this will fail for `NaN` and `Infinity`.
 
 ```js
-var cups = 2;
+let cups = 2;
 assert.isFinite(cups, "how many cups");
 
 assert.isFinite(NaN); // throws
@@ -475,7 +475,7 @@ assert.isFinite(NaN); // throws
 Asserts that `value` is a boolean.
 
 ```js
-var teaReady = true,
+let teaReady = true,
   teaServed = false;
 
 assert.isBoolean(teaReady, "is the tea ready");
@@ -490,7 +490,7 @@ assert.isBoolean(teaServed, "has tea been served");
 Asserts that `value` is _not_ a boolean.
 
 ```js
-var teaReady = "yep",
+let teaReady = "yep",
   teaServed = "nope";
 
 assert.isNotBoolean(teaReady, "is the tea ready");
@@ -535,7 +535,7 @@ assert.notTypeOf("tea", "number", "strings are not numbers");
 Asserts that `value` is an instance of `constructor`.
 
 ```js
-var Tea = function (name) {
+let Tea = function (name) {
     this.name = name;
   },
   chai = new Tea("chai");
@@ -552,7 +552,7 @@ assert.instanceOf(chai, Tea, "chai is an instance of tea");
 Asserts `value` is not an instance of `constructor`.
 
 ```js
-var Tea = function (name) {
+let Tea = function (name) {
     this.name = name;
   },
   chai = new String("chai");
@@ -581,7 +581,7 @@ assert.include(
 Strict equality (===) is used. When asserting the inclusion of a value in an array, the array is searched for an element that’s strictly equal to the given value. When asserting a subset of properties in an object, the object is searched for the given property keys, checking that each one is present and strictly equal to the given property value. For instance:
 
 ```js
-var obj1 = { a: 1 },
+let obj1 = { a: 1 },
   obj2 = { b: 2 };
 assert.include([obj1, obj2], obj1);
 assert.include({ foo: obj1, bar: obj2 }, { foo: obj1 });
@@ -609,7 +609,7 @@ assert.notInclude(
 Strict equality (===) is used. When asserting the absence of a value in an array, the array is searched to confirm the absence of an element that’s strictly equal to the given value. When asserting a subset of properties in an object, the object is searched to confirm that at least one of the given property keys is either not present or not strictly equal to the given property value. For instance:
 
 ```js
-var obj1 = { a: 1 },
+let obj1 = { a: 1 },
   obj2 = { b: 2 };
 assert.notInclude([obj1, obj2], { a: 1 });
 assert.notInclude({ foo: obj1, bar: obj2 }, { foo: { a: 1 } });
@@ -625,7 +625,7 @@ assert.notInclude({ foo: obj1, bar: obj2 }, { foo: obj1, bar: { b: 2 } });
 Asserts that `haystack` includes `needle`. Can be used to assert the inclusion of a value in an array or a subset of properties in an object. Deep equality is used.
 
 ```js
-var obj1 = { a: 1 },
+let obj1 = { a: 1 },
   obj2 = { b: 2 };
 assert.deepInclude([obj1, obj2], { a: 1 });
 assert.deepInclude({ foo: obj1, bar: obj2 }, { foo: { a: 1 } });
@@ -641,7 +641,7 @@ assert.deepInclude({ foo: obj1, bar: obj2 }, { foo: { a: 1 }, bar: { b: 2 } });
 Asserts that `haystack` does not include `needle`. Can be used to assert the absence of a value in an array or a subset of properties in an object. Deep equality is used.
 
 ```js
-var obj1 = { a: 1 },
+let obj1 = { a: 1 },
   obj2 = { b: 2 };
 assert.notDeepInclude([obj1, obj2], { a: 9 });
 assert.notDeepInclude({ foo: obj1, bar: obj2 }, { foo: { a: 9 } });
@@ -1676,8 +1676,8 @@ assert.oneOf(1, [2, 1], "Not found in list");
 Asserts that a function changes the value of a property.
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 22;
 };
 assert.changes(fn, obj, "val");
@@ -1694,8 +1694,8 @@ assert.changes(fn, obj, "val");
 Asserts that a function changes the value of a property by an amount (delta).
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val += 2;
 };
 assert.changesBy(fn, obj, "val", 2);
@@ -1711,8 +1711,8 @@ assert.changesBy(fn, obj, "val", 2);
 Asserts that a function does not change the value of a property.
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   console.log("foo");
 };
 assert.doesNotChange(fn, obj, "val");
@@ -1729,8 +1729,8 @@ assert.doesNotChange(fn, obj, "val");
 Asserts that a function does not change the value of a property or of a function’s return value by an amount (delta)
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val += 10;
 };
 assert.changesButNotBy(fn, obj, "val", 5);
@@ -1746,8 +1746,8 @@ assert.changesButNotBy(fn, obj, "val", 5);
 Asserts that a function increases a numeric object property.
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 13;
 };
 assert.increases(fn, obj, "val");
@@ -1764,8 +1764,8 @@ assert.increases(fn, obj, "val");
 Asserts that a function increases a numeric object property or a function’s return value by an amount (delta).
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val += 10;
 };
 assert.increasesBy(fn, obj, "val", 10);
@@ -1781,8 +1781,8 @@ assert.increasesBy(fn, obj, "val", 10);
 Asserts that a function does not increase a numeric object property.
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 8;
 };
 assert.doesNotIncrease(fn, obj, "val");
@@ -1799,8 +1799,8 @@ assert.doesNotIncrease(fn, obj, "val");
 Asserts that a function does not increase a numeric object property or function’s return value by an amount (delta).
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 15;
 };
 assert.increasesButNotBy(fn, obj, "val", 10);
@@ -1816,8 +1816,8 @@ assert.increasesButNotBy(fn, obj, "val", 10);
 Asserts that a function decreases a numeric object property.
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 5;
 };
 assert.decreases(fn, obj, "val");
@@ -1834,8 +1834,8 @@ assert.decreases(fn, obj, "val");
 Asserts that a function decreases a numeric object property or a function’s return value by an amount (delta)
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val -= 5;
 };
 assert.decreasesBy(fn, obj, "val", 5);
@@ -1851,8 +1851,8 @@ assert.decreasesBy(fn, obj, "val", 5);
 Asserts that a function does not decreases a numeric object property.
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 15;
 };
 assert.doesNotDecrease(fn, obj, "val");
@@ -1869,8 +1869,8 @@ assert.doesNotDecrease(fn, obj, "val");
 Asserts that a function does not decreases a numeric object property or a function’s return value by an amount (delta)
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 5;
 };
 assert.doesNotDecreaseBy(fn, obj, "val", 1);
@@ -1887,8 +1887,8 @@ assert.doesNotDecreaseBy(fn, obj, "val", 1);
 Asserts that a function does not decreases a numeric object property or a function’s return value by an amount (delta)
 
 ```js
-var obj = { val: 10 };
-var fn = function () {
+let obj = { val: 10 };
+let fn = function () {
   obj.val = 5;
 };
 assert.decreasesButNotBy(fn, obj, "val", 1);
@@ -1901,7 +1901,7 @@ assert.decreasesButNotBy(fn, obj, "val", 1);
 Asserts if value is not a false value, and throws if it is a true value. This is added to allow for chai to be a drop-in replacement for Node’s assert class.
 
 ```js
-var err = new Error("I am a custom error");
+let err = new Error("I am a custom error");
 assert.ifError(err); // Rethrows err!
 ```
 
@@ -1924,9 +1924,9 @@ assert.isExtensible({});
 Asserts that `object` is _not_ extensible.
 
 ```js
-var nonExtensibleObject = Object.preventExtensions({});
-var sealedObject = Object.seal({});
-var frozenObject = Object.freeze({});
+let nonExtensibleObject = Object.preventExtensions({});
+let sealedObject = Object.seal({});
+let frozenObject = Object.freeze({});
 
 assert.isNotExtensible(nonExtensibleObject);
 assert.isNotExtensible(sealedObject);
@@ -1941,8 +1941,8 @@ assert.isNotExtensible(frozenObject);
 Asserts that `object` is sealed (cannot have new properties added to it and its existing properties cannot be removed).
 
 ```js
-var sealedObject = Object.seal({});
-var frozenObject = Object.seal({});
+let sealedObject = Object.seal({});
+let frozenObject = Object.seal({});
 
 assert.isSealed(sealedObject);
 assert.isSealed(frozenObject);
@@ -1967,7 +1967,7 @@ assert.isNotSealed({});
 Asserts that `object` is frozen (cannot have new properties added to it and its existing properties cannot be modified).
 
 ```js
-var frozenObject = Object.freeze({});
+let frozenObject = Object.freeze({});
 assert.frozen(frozenObject);
 ```
 

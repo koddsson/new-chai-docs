@@ -25,7 +25,7 @@ For our helper file: `test/helpers/model.js`
 
 ```js
 module.exports = function (chai, utils) {
-  var Assertion = chai.Assertion;
+  let Assertion = chai.Assertion;
 
   // your helpers here
 };
@@ -34,7 +34,7 @@ module.exports = function (chai, utils) {
 And, for our actual test: `test/person.js`
 
 ```js
-var chai = require("chai"),
+let chai = require("chai"),
   chaiModel = require("./helpers/model"),
   expect = chai.expect;
 
@@ -58,9 +58,9 @@ The upper-most core concept of how assertions work internally is the concept of 
 The flag utility is exposed as `utils.flag` from within our `use` function. It can function as either a getter or a setter, depending on the number of arguments passed to it.
 
 ```js
-var myAssert = new Assertion(obj);
+let myAssert = new Assertion(obj);
 utils.flag(myAssert, "owner", "me"); // sets key `owner` to `me`
-var owner = utils.flag(myAssert, "owner"); // gets key `owner`, returns value
+let owner = utils.flag(myAssert, "owner"); // gets key `owner`, returns value
 ```
 
 ### Object Flag
@@ -68,14 +68,14 @@ var owner = utils.flag(myAssert, "owner"); // gets key `owner`, returns value
 The most important of Chai’s reserved flags is the `object` flag. This is the subject of an assertion.
 
 ```js
-var myAssert = new Assertion("Arthur Dent");
-var obj = utils.flag(myAssert, "object"); // obj === 'Arthur Dent';
+let myAssert = new Assertion("Arthur Dent");
+let obj = utils.flag(myAssert, "object"); // obj === 'Arthur Dent';
 ```
 
 This flag is so often used that a shortcut was provided as the `_obj` property of a constructed assertion.
 
 ```js
-var obj = myAssert._obj; // obj === 'Arthur Dent'
+let obj = myAssert._obj; // obj === 'Arthur Dent'
 ```
 
 The following flags are used by Chai’s core assertions. Side effects may occur should you interfere with these.
@@ -99,7 +99,7 @@ For this, each constructed `Assertion` has a method called simply `assert`. It a
 To begin, we will construct Arthur again, then we can assert that he is who he says he is.
 
 ```js
-var arthur = new Assertion("Arthur Dent");
+let arthur = new Assertion("Arthur Dent");
 
 arthur.assert(
   arthur._obj === "Arthur Dent",

@@ -174,7 +174,7 @@ expect(Symbol()).to.be.a("symbol");
 `.a` supports objects that have a custom type set via `Symbol.toStringTag`.
 
 ```js
-var myObj = {
+let myObj = {
   [Symbol.toStringTag]: "myCustomType",
 };
 
@@ -1347,7 +1347,7 @@ The alias `.key` can be used interchangeably with `.keys`.
 When no arguments are provided, `.throw` invokes the target function and asserts that an error is thrown.
 
 ```js
-var badFn = function () {
+let badFn = function () {
   throw new TypeError("Illegal salmon!");
 };
 
@@ -1357,7 +1357,7 @@ expect(badFn).to.throw();
 When one argument is provided, and it’s an error constructor, `.throw` invokes the target function and asserts that an error is thrown that’s an instance of that error constructor.
 
 ```js
-var badFn = function () {
+let badFn = function () {
   throw new TypeError("Illegal salmon!");
 };
 
@@ -1367,8 +1367,8 @@ expect(badFn).to.throw(TypeError);
 When one argument is provided, and it’s an error instance, `.throw` invokes the target function and asserts that an error is thrown that’s strictly (`===`) equal to that error instance.
 
 ```js
-var err = new TypeError("Illegal salmon!");
-var badFn = function () {
+let err = new TypeError("Illegal salmon!");
+let badFn = function () {
   throw err;
 };
 
@@ -1378,7 +1378,7 @@ expect(badFn).to.throw(err);
 When one argument is provided, and it’s a string, `.throw` invokes the target function and asserts that an error is thrown with a message that contains that string.
 
 ```js
-var badFn = function () {
+let badFn = function () {
   throw new TypeError("Illegal salmon!");
 };
 
@@ -1388,7 +1388,7 @@ expect(badFn).to.throw("salmon");
 When one argument is provided, and it’s a regular expression, `.throw` invokes the target function and asserts that an error is thrown with a message that matches that regular expression.
 
 ```js
-var badFn = function () {
+let badFn = function () {
   throw new TypeError("Illegal salmon!");
 };
 
@@ -1398,8 +1398,8 @@ expect(badFn).to.throw(/salmon/);
 When two arguments are provided, and the first is an error instance or constructor, and the second is a string or regular expression, `.throw` invokes the function and asserts that an error is thrown that fulfills both conditions as described above.
 
 ```js
-var err = new TypeError("Illegal salmon!");
-var badFn = function () {
+let err = new TypeError("Illegal salmon!");
+let badFn = function () {
   throw err;
 };
 
@@ -1412,7 +1412,7 @@ expect(badFn).to.throw(err, /salmon/);
 Add `.not` earlier in the chain to negate `.throw`.
 
 ```js
-var goodFn = function () {};
+let goodFn = function () {};
 
 expect(goodFn).to.not.throw();
 ```
@@ -1422,7 +1422,7 @@ However, it’s dangerous to negate `.throw` when providing any arguments. The p
 When the target isn’t expected to throw an error, it’s often best to assert exactly that.
 
 ```js
-var goodFn = function () {};
+let goodFn = function () {};
 
 expect(goodFn).to.not.throw(); // Recommended
 expect(goodFn).to.not.throw(ReferenceError, "x"); // Not recommended
@@ -1431,7 +1431,7 @@ expect(goodFn).to.not.throw(ReferenceError, "x"); // Not recommended
 When the target is expected to throw an error, it’s often best to assert that the error is of its expected type, and has a message that includes an expected string, rather than asserting that it doesn’t have one of many unexpected types, and doesn’t have a message that includes some string.
 
 ```js
-var badFn = function () {
+let badFn = function () {
   throw new TypeError("Illegal salmon!");
 };
 
@@ -1442,9 +1442,9 @@ expect(badFn).to.not.throw(ReferenceError, "x"); // Not recommended
 `.throw` changes the target of any assertions that follow in the chain to be the error object that’s thrown.
 
 ```js
-var err = new TypeError("Illegal salmon!");
+let err = new TypeError("Illegal salmon!");
 err.code = 42;
-var badFn = function () {
+let badFn = function () {
   throw err;
 };
 
@@ -1454,7 +1454,7 @@ expect(badFn).to.throw(TypeError).with.property("code", 42);
 `.throw` accepts an optional `msg` argument which is a custom error message to show when the assertion fails. The message can also be given as the second argument to `expect`. When not providing two arguments, always use the second form.
 
 ```js
-var goodFn = function () {};
+let goodFn = function () {};
 
 expect(goodFn).to.throw(TypeError, "x", "nooo why fail??");
 expect(goodFn, "nooo why fail??").to.throw();
@@ -1742,7 +1742,7 @@ expect(1, "nooo why fail??").to.be.oneOf([2, 3, 4]);
 When one argument is provided, `.change` asserts that the given function `subject` returns a different value when it’s invoked before the target function compared to when it’s invoked afterward. However, it’s often best to assert that `subject` is equal to its expected value.
 
 ```js
-var dots = "",
+let dots = "",
   addDot = function () {
     dots += ".";
   },
@@ -1762,7 +1762,7 @@ expect(addDot).to.change(getDots);
 When two arguments are provided, `.change` asserts that the value of the given object `subject`’s `prop` property is different before invoking the target function compared to afterward.
 
 ```js
-var myObj = { dots: "" },
+let myObj = { dots: "" },
   addDot = function () {
     myObj.dots += ".";
   };
@@ -1781,16 +1781,18 @@ Strict (`===`) equality is used to compare before and after values.
 Add `.not` earlier in the chain to negate `.change`.
 
 ```js
-var dots = "",
-  noop = function () {},
-  getDots = function () {
-    return dots;
-  };
+const dots = "";
+const noop = function () {};
+const getDots = function () {
+  return dots;
+};
 
 expect(noop).to.not.change(getDots);
+```
 
-var myObj = { dots: "" },
-  noop = function () {};
+```js
+const myObj = { dots: "" };
+const noop = function () {};
 
 expect(noop).to.not.change(myObj, "dots");
 ```
@@ -1798,20 +1800,22 @@ expect(noop).to.not.change(myObj, "dots");
 `.change` accepts an optional `msg` argument which is a custom error message to show when the assertion fails. The message can also be given as the second argument to `expect`. When not providing two arguments, always use the second form.
 
 ```js
-var myObj = { dots: "" },
-  addDot = function () {
-    myObj.dots += ".";
-  };
+const myObj = { dots: "" };
+const addDot = function () {
+  myObj.dots += ".";
+};
 
 expect(addDot).to.not.change(myObj, "dots", "nooo why fail??");
+```
 
-var dots = "",
-  addDot = function () {
-    dots += ".";
-  },
-  getDots = function () {
-    return dots;
-  };
+```js
+let dots = "";
+const addDot = function () {
+  dots += ".";
+};
+const getDots = function () {
+  return dots;
+};
 
 expect(addDot, "nooo why fail??").to.not.change(getDots);
 ```
@@ -1819,7 +1823,7 @@ expect(addDot, "nooo why fail??").to.not.change(getDots);
 `.change` also causes all `.by` assertions that follow in the chain to assert how much a numeric subject was increased or decreased by. However, it’s dangerous to use `.change.by`. The problem is that it creates uncertain expectations by asserting that the subject either increases by the given delta, or that it decreases by the given delta. It’s often best to identify the exact output that’s expected, and then write an assertion that only accepts that exact output.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   },
@@ -1845,7 +1849,7 @@ The alias `.changes` can be used interchangeably with `.change`.
 When one argument is provided, `.increase` asserts that the given function `subject` returns a greater number when it’s invoked after invoking the target function compared to when it’s invoked beforehand. `.increase` also causes all `.by` assertions that follow in the chain to assert how much greater of a number is returned. It’s often best to assert that the return value increased by the expected amount, rather than asserting it increased by any amount.
 
 ```js
-var val = 1,
+let val = 1,
   addTwo = function () {
     val += 2;
   },
@@ -1860,7 +1864,7 @@ expect(addTwo).to.increase(getVal); // Not recommended
 When two arguments are provided, `.increase` asserts that the value of the given object `subject`’s `prop` property is greater after invoking the target function compared to beforehand.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   };
@@ -1874,7 +1878,7 @@ Add `.not` earlier in the chain to negate `.increase`. However, it’s dangerous
 When the subject is expected to decrease, it’s often best to assert that it decreased by the expected amount.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   subtractTwo = function () {
     myObj.val -= 2;
   };
@@ -1886,7 +1890,7 @@ expect(subtractTwo).to.not.increase(myObj, "val"); // Not recommended
 When the subject is expected to stay the same, it’s often best to assert exactly that.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   noop = function () {};
 
 expect(noop).to.not.change(myObj, "val"); // Recommended
@@ -1896,16 +1900,18 @@ expect(noop).to.not.increase(myObj, "val"); // Not recommended
 `.increase` accepts an optional `msg` argument which is a custom error message to show when the assertion fails. The message can also be given as the second argument to `expect`. When not providing two arguments, always use the second form.
 
 ```js
-var myObj = { val: 1 },
-  noop = function () {};
+const myObj = { val: 1 };
+const noop = function () {};
 
 expect(noop).to.increase(myObj, "val", "nooo why fail??");
+```
 
-var val = 1,
-  noop = function () {},
-  getVal = function () {
-    return val;
-  };
+```js
+const val = 1;
+const noop = function () {};
+const getVal = function () {
+  return val;
+};
 
 expect(noop, "nooo why fail??").to.increase(getVal);
 ```
@@ -1921,13 +1927,13 @@ The alias `.increases` can be used interchangeably with `.increase`.
 When one argument is provided, `.decrease` asserts that the given function `subject` returns a lesser number when it’s invoked after invoking the target function compared to when it’s invoked beforehand. `.decrease` also causes all `.by` assertions that follow in the chain to assert how much lesser of a number is returned. It’s often best to assert that the return value decreased by the expected amount, rather than asserting it decreased by any amount.
 
 ```js
-var val = 1,
-  subtractTwo = function () {
-    val -= 2;
-  },
-  getVal = function () {
-    return val;
-  };
+let val = 1;
+const subtractTwo = function () {
+  val -= 2;
+};
+const getVal = function () {
+  return val;
+};
 
 expect(subtractTwo).to.decrease(getVal).by(2); // Recommended
 expect(subtractTwo).to.decrease(getVal); // Not recommended
@@ -1936,10 +1942,10 @@ expect(subtractTwo).to.decrease(getVal); // Not recommended
 When two arguments are provided, `.decrease` asserts that the value of the given object `subject`’s `prop` property is lesser after invoking the target function compared to beforehand.
 
 ```js
-var myObj = { val: 1 },
-  subtractTwo = function () {
-    myObj.val -= 2;
-  };
+const myObj = { val: 1 };
+const subtractTwo = function () {
+  myObj.val -= 2;
+};
 
 expect(subtractTwo).to.decrease(myObj, "val").by(2); // Recommended
 expect(subtractTwo).to.decrease(myObj, "val"); // Not recommended
@@ -1950,7 +1956,7 @@ Add `.not` earlier in the chain to negate `.decrease`. However, it’s dangerous
 When the subject is expected to increase, it’s often best to assert that it increased by the expected amount.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   };
@@ -1962,7 +1968,7 @@ expect(addTwo).to.not.decrease(myObj, "val"); // Not recommended
 When the subject is expected to stay the same, it’s often best to assert exactly that.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   noop = function () {};
 
 expect(noop).to.not.change(myObj, "val"); // Recommended
@@ -1972,16 +1978,18 @@ expect(noop).to.not.decrease(myObj, "val"); // Not recommended
 `.decrease` accepts an optional `msg` argument which is a custom error message to show when the assertion fails. The message can also be given as the second argument to `expect`. When not providing two arguments, always use the second form.
 
 ```js
-var myObj = { val: 1 },
-  noop = function () {};
+const myObj = { val: 1 };
+const noop = function () {};
 
 expect(noop).to.decrease(myObj, "val", "nooo why fail??");
+```
 
-var val = 1,
-  noop = function () {},
-  getVal = function () {
-    return val;
-  };
+```js
+const val = 1;
+const noop = function () {};
+const getVal = function () {
+  return val;
+};
 
 expect(noop, "nooo why fail??").to.decrease(getVal);
 ```
@@ -1996,7 +2004,7 @@ The alias `.decreases` can be used interchangeably with `.decrease`.
 When following an `.increase` assertion in the chain, `.by` asserts that the subject of the `.increase` assertion increased by the given `delta`.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   };
@@ -2007,7 +2015,7 @@ expect(addTwo).to.increase(myObj, "val").by(2);
 When following a `.decrease` assertion in the chain, `.by` asserts that the subject of the `.decrease` assertion decreased by the given `delta`.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   subtractTwo = function () {
     myObj.val -= 2;
   };
@@ -2018,7 +2026,7 @@ expect(subtractTwo).to.decrease(myObj, "val").by(2);
 When following a `.change` assertion in the chain, `.by` asserts that the subject of the `.change` assertion either increased or decreased by the given `delta`. However, it’s dangerous to use `.change.by`. The problem is that it creates uncertain expectations. It’s often best to identify the exact output that’s expected, and then write an assertion that only accepts that exact output.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   },
@@ -2036,7 +2044,7 @@ expect(subtractTwo).to.change(myObj, "val").by(2); // Not recommended
 Add `.not` earlier in the chain to negate `.by`. However, it’s often best to assert that the subject changed by its expected delta, rather than asserting that it didn’t change by one of countless unexpected deltas.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   };
@@ -2051,7 +2059,7 @@ expect(addTwo).to.increase(myObj, "val").but.not.by(3);
 `.by` accepts an optional `msg` argument which is a custom error message to show when the assertion fails. The message can also be given as the second argument to `expect`.
 
 ```js
-var myObj = { val: 1 },
+let myObj = { val: 1 },
   addTwo = function () {
     myObj.val += 2;
   };
@@ -2071,7 +2079,7 @@ expect({ a: 1 }).to.be.extensible;
 Add `.not` earlier in the chain to negate `.extensible`.
 
 ```js
-var nonExtensibleObject = Object.preventExtensions({}),
+let nonExtensibleObject = Object.preventExtensions({}),
   sealedObject = Object.seal({}),
   frozenObject = Object.freeze({});
 
@@ -2092,8 +2100,8 @@ expect(1, "nooo why fail??").to.be.extensible;
 Asserts that the target is sealed, which means that new properties can’t be added to it, and its existing properties can’t be reconfigured or deleted. However, it’s possible that its existing properties can still be reassigned to different values. Primitives are always sealed.
 
 ```js
-var sealedObject = Object.seal({});
-var frozenObject = Object.freeze({});
+let sealedObject = Object.seal({});
+let frozenObject = Object.freeze({});
 
 expect(sealedObject).to.be.sealed;
 expect(frozenObject).to.be.sealed;
@@ -2117,7 +2125,7 @@ expect({ a: 1 }, "nooo why fail??").to.be.sealed;
 Asserts that the target is frozen, which means that new properties can’t be added to it, and its existing properties can’t be reassigned to different values, reconfigured, or deleted. Primitives are always frozen.
 
 ```js
-var frozenObject = Object.freeze({});
+let frozenObject = Object.freeze({});
 
 expect(frozenObject).to.be.frozen;
 expect(1).to.be.frozen;
