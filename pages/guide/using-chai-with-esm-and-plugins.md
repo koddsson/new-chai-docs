@@ -1,6 +1,6 @@
 ---
 title: "Using Chai with ESM and Plugins"
-layout: "guide.njk"
+layout: "base.njk"
 ---
 
 This guide provides an overview of how to use Chai with ECMAScript modules (ESM) and plugins, including examples using the `chai-http` plugin.
