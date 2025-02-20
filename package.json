@@ -26,7 +26,6 @@
     "@sindresorhus/slugify": "^2.2.1",
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
-    "eleventy-plugin-toc": "^1.1.5",
     "eslint": "^9.20.1",
     "globals": "^15.15.0",
     "jsdom": "^26.0.0",
