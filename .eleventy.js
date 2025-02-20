@@ -1,24 +1,34 @@
-import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+
+import slugify from "@sindresorhus/slugify";
+
+import pluginTOC from './eleventy-plugin-toc.js';
 
 // Needed for GitHub Pages
 export const config = {
   pathPrefix: "/new-chai-docs/",
 };
 
-const md = markdownIt({ html: true }).use(markdownItAnchor);
-
 export default function (eleventyConfig) {
-  eleventyConfig.setLibrary("md", md);
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({ html: true }).use(markdownItAnchor, {
+      permalink: true,
+      slugify: (s) => slugify(s),
+    }),
+  );
 
   // Enable syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Needed for deploying to GitHub Pages
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
+  eleventyConfig.addFilter("toc", pluginTOC);
 
   eleventyConfig.addPassthroughCopy({
     "public/": "/",

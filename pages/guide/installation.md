@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-layout: "guide.njk"
+layout: "base.njk"
 ---
 
 Chai is available for both Node.js and the browser using any test framework you

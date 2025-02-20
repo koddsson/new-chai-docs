@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-layout: "guide.njk"
+layout: "base.njk"
 ---
 
 If you have questions or issues, please use this project's [GitHub Issues](https://github.com/chaijs/chai/issues). You can also stay updated through the [Google Group](https://groups.google.com/g/chaijs) or contact [@jakeluer](https://twitter.com/jakeluer) directly on Twitter. Chai developers are also available on Freenode IRC in #letstest.js.

@@ -1,6 +1,6 @@
 ---
 title: "Getting Started Guide"
-layout: "guide.njk"
+layout: "base.njk"
 ---
 
 Welcome to Chai! We are glad that you have decided to give Chai.js a try! If

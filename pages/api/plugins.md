@@ -1,6 +1,6 @@
 ---
 title: "Plugin Utilities"
-layout: "api.njk"
+layout: "base.njk"
 ---
 
 The plugin utilities are for those who want to extend Chai with their own set of assertions. The [Core Plugin Concepts](/guide/plugins) and [Building a Helper](/guide/helpers) guide tutorials are a great reference on how to get started with your own assertions.
