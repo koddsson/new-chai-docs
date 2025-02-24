@@ -24,7 +24,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@eslint/markdown": "^6.2.2",
     "@sindresorhus/slugify": "^2.2.1",
-    "@tailwindcss/postcss": "^4.0.8",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.20.1",
     "globals": "^16.0.0",
@@ -33,10 +32,8 @@
     "markdown-it-anchor": "^9.2.0",
     "markdownlint": "^0.37.4",
     "markdownlint-cli": "^0.44.0",
-    "postcss": "^8.5.3",
     "prettier": "3.5.2",
-    "puppeteer": "^24.2.1",
-    "tailwindcss": "^4.0.6"
+    "puppeteer": "^24.2.1"
   },
   "dependencies": {
     "@picocss/pico": "^2.0.6"
