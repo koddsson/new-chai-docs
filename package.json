@@ -24,7 +24,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@eslint/markdown": "^6.2.2",
     "@sindresorhus/slugify": "^2.2.1",
-    "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/postcss": "^4.0.8",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.20.1",
     "globals": "^15.15.0",
