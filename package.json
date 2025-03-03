@@ -33,7 +33,7 @@
     "markdownlint": "^0.37.4",
     "markdownlint-cli": "^0.44.0",
     "prettier": "3.5.2",
-    "puppeteer": "^24.2.1"
+    "puppeteer": "^24.3.0"
   },
   "dependencies": {
     "@picocss/pico": "^2.0.6"
