@@ -24,7 +24,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@eslint/markdown": "^6.2.2",
     "@sindresorhus/slugify": "^2.2.1",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.21.0",
     "globals": "^16.0.0",
     "jsdom": "^26.0.0",
