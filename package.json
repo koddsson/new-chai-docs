@@ -22,7 +22,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^5.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@eslint/markdown": "^6.2.2",
+    "@eslint/markdown": "^6.3.0",
     "@sindresorhus/slugify": "^2.2.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.21.0",
