@@ -3,16 +3,21 @@
   border: 1px solid var(--pico-dropdown-border-color);
   padding: var(--pico-spacing);
   margin-bottom: var(--pico-spacing);
-  background: var(--pico-card-background-color);
+  background: #fff;
   border-radius: var(--pico-border-radius);
   transition: background 0.3s, border 0.3s;
 }
 
 /* PicoCSS handles dark mode automatically with [data-theme] */
-[data-theme="dark"] .sidebar {
-  background: var(--pico-card-background-color);
-  border: 1px solid var(--pico-muted-border-color);
-  color: var(--pico-contrast-medium);
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    .sidebar {
+      background: var(--pico-card-background-color);
+      border: 1px solid var(--pico-muted-border-color);
+      color: var(--pico-contrast-medium);
+    }
+  }
 }
 
 /* Improve accessibility */
@@ -41,4 +46,28 @@
 /* Focus styles for accessibility */
 .sidebar summary:focus {
   outline: 2px solid var(--pico-primary);
+}
+
+/* Orange color for light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme=light],
+:root:not([data-theme=dark]),
+:host:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(244, 93, 44, 0.25);
+  --pico-primary: #a40802;
+  --pico-primary-background: #d24317;
+  --pico-primary-underline: rgba(189, 60, 19, 0.5);
+  --pico-primary-hover: #942d0d;
+  --pico-primary-hover-background: #bd3c13;
+  --pico-primary-focus: rgba(244, 93, 44, 0.5);
+  --pico-primary-inverse: #fff;
+  --pico-background-color: #faf4e8;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    --pico-primary: #ff0900;
+    --pico-background-color: #13171f;
+  }
 }
