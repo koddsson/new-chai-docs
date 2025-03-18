@@ -1,12 +1,13 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 
 import slugify from "@sindresorhus/slugify";
 
-import pluginTOC from './eleventy-plugin-toc.js';
+import pluginTOC from "./eleventy-plugin-toc.js";
 
 // Needed for GitHub Pages
 export const config = {
@@ -27,6 +28,7 @@ export default function (eleventyConfig) {
 
   // Needed for deploying to GitHub Pages
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   eleventyConfig.addFilter("toc", pluginTOC);
 
